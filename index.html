@@ -17,7 +17,7 @@
             <div class="container-fluid d-flex flex-column p-0">
                 <a class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0" href="#">
                     <div class="sidebar-brand-icon rotate-n-15"><i class="fas fa-road"></i></div>
-                    <div class="sidebar-brand-text mx-3"><span>D<sup>2</sup> Teamg</span></div>
+                    <div class="sidebar-brand-text mx-3"><span>D<sup>2</sup> Team</span></div>
                 </a>
                 <hr class="sidebar-divider my-0">
                 <ul class="nav navbar-nav text-light" id="accordionSidebar">
@@ -37,10 +37,9 @@
                             <p id="project-title">Road Crossing Assistant</p>
                         <ul class="nav navbar-nav flex-nowrap ml-auto">
                             <div class="d-none d-sm-block topbar-divider"></div>
-   
-                    </ul>
-            </div>
-            </nav>
+                        </ul>
+                    </div>
+                </nav>
             <div class="container-fluid">
                 <div class="d-sm-flex justify-content-between align-items-center mb-4">
                     <h3 class="text-dark mb-0">Description</h3>
@@ -52,7 +51,13 @@
                                 <div class="row align-items-center no-gutters">
                                     <div class="col mr-2">
                                         <div class="text-uppercase text-primary font-weight-bold text-xls mb-1"><span>Abstract</span></div>
-                                        <div class="text-dark h5 mb-0"><span>An ongoing project with an aim to aid blind people for crossing road, more precisely Indian roads  where there may not be many traffic signals, and where traffic rules and speed limits may not be followed strictly.. For the same, we have collected a dataset of videos. Firstly, we plan to make a machine learning model and use this dataset to predict the safe duration for crossing road in the given video. Then, we plan to integrate this model into a wearable assistant so that blind people can use it for crossing roads in realtime.</span></div>
+                                        <div class="text-dark h5 mb-0"><span>An ongoing project with an aim to aid blind people for crossing road, 
+                                            more precisely Indian roads  where there may not be many traffic signals, and where traffic rules and speed limits
+                                            may not be followed strictly.. For the same, we have collected a dataset of videos. 
+                                            Firstly, we plan to make a machine learning model and use this dataset to predict the safe duration for crossing road
+                                            in the given video. Then, we plan to integrate this model into a wearable assistant so that blind people can use it 
+                                            for crossing roads in realtime.</span>
+                                        </div>
                                         <br><div class="text-uppercase text-primary font-weight-bold text-xls mb-1"><span>Workflow</span></div>
                                         <div><img src="assets/img/workflow.png" width="90%"></div>
                                     </div>
@@ -158,10 +163,12 @@
     </div>
     <footer class="bg-white sticky-footer">
         <div class="container my-auto">
-            <div class="text-center my-auto copyright"><span>Copyright © Data Intelligence Developers 2020</span></div>
+            <div class="text-center my-auto copyright">
+                <span>Copyright © Data Intelligence Developers 2020</span>
+            </div>
         </div>
     </footer>
-    </div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a></div>
+</div><div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a></div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script>
@@ -170,7 +177,9 @@
     <script src="assets/js/theme.js"></script>
     <script>
         $( document ).ready(function() {
-            $(".sidebar").toggleClass("toggled");
+            if ($(window).width() < 768) {
+                $(".sidebar").toggleClass("toggled");
+            }
         });
     </script>
 </body>

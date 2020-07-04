@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Dataset | RCA</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="assets/styles/dataset-styles.css">
+    <link rel="stylesheet" href="assets/styles/home-styles.css">
+</head>
+
+<body id="page-top">
+    <div id="wrapper">
+        <nav class="navbar navbar-dark align-items-start sidebar sidebar-dark accordion bg-gradient-primary p-0">
+            <div class="container-fluid d-flex flex-column p-0">
+                <a class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0" href="#">
+                    <div class="sidebar-brand-icon rotate-n-15"><i class="fas fa-road"></i></div>
+                    <div class="sidebar-brand-text mx-3"><span>D<sup>2</sup> Team</span></div>
+                </a>
+                <hr class="sidebar-divider my-0">
+                <ul class="nav navbar-nav text-light" id="accordionSidebar">
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="index.html"><i class="fas fa-home"></i><span>Home</span></a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link active" href="dataset.html"><i class="fas fa-database"></i><span>Dataset</span></a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="implementation.html"><i class="fas fa-calendar-check"></i><span>Implementation</span></a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="future-scope.html"><i class="fab fa-quinscape"></i><span>Future Scopes</span></a></li>
+                </ul>
+                <div class="text-center d-none d-md-inline">
+                    <button class="btn rounded-circle border-0" id="sidebarToggle" type="button"></button>
+                </div>
+            </div>
+        </nav>
+        <div class="d-flex flex-column" id="content-wrapper">
+            <div id="content">
+                <nav class="navbar navbar-light navbar-expand bg-white shadow mb-4 topbar static-top">
+                    <div class="container-fluid"><button class="btn btn-link d-md-none rounded-circle mr-3" id="sidebarToggleTop" type="button"><i class="fas fa-bars"></i></button>
+                        <p id="project-title">Road Crossing Assistant</p>
+                        <ul class="nav navbar-nav flex-nowrap ml-auto">
+                            <div class="d-none d-sm-block topbar-divider"></div>
+                        </ul>
+                    </div>
+                </nav>
+
+        <div class="container-fluid">
+            <div class="row camera-and-description-div">
+                <div class="col-md-12 col-xl-12 mb-4">
+                    <div class="card shadow py-2">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="camera-img-div col-lg-4 col-sm-12"><br>
+                                    <img src="assets/img/action-camera.jpeg" width="100%">
+                                </div>
+                                <div class="dataset-description-div border-left-success col-lg-7 col-sm-12">
+                                    <h4 class="text-capitalize text-primary font-weight-bold text-xls mb-1">
+                                        <span>Dataset Description</span>
+                                    </h4><br>
+                                    <ul class="description-ul list-group">
+                                        <li class="list-group-item">1. Videos from diverse locations, time, traffic patterns,
+                                            safe/unsafe using an action camera on different roads of Anand, Gujarat.</li>
+                                        <li class="list-group-item">2. 76 videos of duration 5-8 seconds each.</li>
+                                        <li class="list-group-item">3. Annotated each video with a time instance when the
+                                            road is safe to cross and the instance when the safe duration ends.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class=" card shadow py-2 dataset-gifs-div mb-5">
+                <h4 class="text-capitalize text-primary font-weight-bold text-xls mb-1 ml-3 mt-2">
+                    Sample videos from Dataset
+                </h4>
+                <hr style="height:1px; background-color:#efefef; width: 100%; text-align: center;"/>
+                <div class="row">
+                    <div class="gifs-row-1 col-lg-6 col-sm-12">
+                        <img src="assets/img/website1.gif" width="90%">
+                    </div>
+                    <div class="gifs-row-1 col-lg-6 col-sm-12">
+                        <img src="assets/img/website2.gif" width="90%">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="gifs-row-2 col-lg-6 col-sm-12">
+                        <img src="assets/img/website3.gif" width="90%">
+                    </div>
+                    <div class="gifs-row-2 col-lg-6 col-sm-12">
+                        <img src="assets/img/website4.gif" width="90%">
+                    </div>
+                </div>
+            </div>
+
+            <div class=" card shadow py-2 table-description-div mb-5">
+                <h4 class="text-primary font-weight-bold text-xls mb-1 ml-3 mt-2">
+                    Label.csv Samples
+                </h4>
+                <hr style="height:1px; background-color:#efefef; width: 100%; text-align: center;"/>
+                <div class="row">
+                    <div class="tables-div col-lg-6 col-sm-12">
+                        <div class="table-responsive table" id="dataTable" role="grid" aria-describedby="dataTable_info">
+                            <table class="table my-0 mt-2 ml-2" id="dataTable">
+                                <thead>
+                                    <tr>
+                                        <th>Video <br> No.</th> <th>SS1</th> <th>SE1</th> <th>SS2</th> <th>SE2</th> <th>SS3</th> <th>SE3</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td> <td>-</td> <td>-</td> <td>-</td> <td>-</td> <td>-</td> <td>-</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td> <td>1</td> <td>5</td> <td>-</td> <td>-</td> <td>-</td> <td>-</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td> <td>1</td> <td>2</td> <td>6</td> <td>7</td> <td>-</td> <td>-</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td> <td>2</td> <td>4</td> <td>-</td> <td>-</td> <td>-</td> <td>-</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td> <td>0</td> <td>3</td> <td>-</td> <td>-</td> <td>-</td> <td>-</td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td> <td>4</td> <td>6</td> <td>-</td> <td>-</td> <td>-</td> <td>-</td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-sm-12 table-description-text">
+                        <p class="mx-3">
+                            SS = Safe duration start, SE= Safe duration ends
+                            <br>
+                            As seen in the table, we have manually labelled safe duration for each video.
+                            <br>
+                            A video can have multiple safe durations.
+                        </p>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <footer class="bg-white sticky-footer">
+        <div class="container my-auto">
+            <div class="text-center my-auto copyright">
+                <span>Copyright © Data Intelligence Developers 2020</span>
+            </div>
+        </div>
+    </footer>
+    </div>
+    <div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>
+    <script src="assets/js/theme.js"></script>
+    <script>
+        $( document ).ready(function() {
+            if ($(window).width() < 768) {
+                $(".sidebar").toggleClass("toggled");
+            }
+        });
+    </script>
+</body>
+</html>

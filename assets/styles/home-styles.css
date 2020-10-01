@@ -1,7 +1,18 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
 #project-title{
     font-size: 2.5em;
-    font-weight: 550;
+    font-weight: 500;
+}
 
+.card{
+    border-radius: 10px;
+}
+
+.sidebar{
+    transition-duration: 0.5s;   
 }
 
 @media screen and (max-width:768px){

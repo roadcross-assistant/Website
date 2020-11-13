@@ -15,10 +15,14 @@ body{
     transition-duration: 0.5s;   
 }
 
+
+
 @media screen and (max-width:768px){
     .navbar{
         height: 9rem;
     }
+
+    
     #project-title{
         font-size: 2em;
         font-weight: 550;
@@ -26,4 +30,9 @@ body{
     } 
 }
 
+@media screen and (max-width:768px){
+    .navbar1{
+        height: 1;
+    }
 
+}

@@ -2,6 +2,10 @@ body{
     font-family: 'Montserrat', sans-serif;
 }
 
+.camera-img-div, .dataset-description-div{
+    height: 100%;
+}
+
 .dataset-gifs-div .row{
     margin-bottom: 20px;
 }

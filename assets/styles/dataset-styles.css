@@ -20,6 +20,16 @@ body{
     border-radius: 5px;
 }
 
+images-row img{
+    margin: 10px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    padding: 4px;;
+}
+
 .tables-div{
     padding: 0 30px;
 }
+
+
+  

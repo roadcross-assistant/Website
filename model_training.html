@@ -93,15 +93,66 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="row">
+                    <div class="col-md-12 col-xl-12 mb-4">
+                        <div class="card shadow mb-4">
+                            <div class="card-body">
+                                <div class="row align-items-center no-gutters">
+                                    <div class="col mr-2">
+                                        <h4 class="text-capitalize text-primary font-weight-bold text-xls mb-1 ml-3 mt-2">
+                                            APPROACH 1.2:
+                                        </h4>
+                                        <hr style="height:1px; background-color:#efefef; width: 100%; text-align: center;"/>
+                                        Approach 1.1 is an advancement over Approach 1.2 where we have made an attempt to improve our
+                                        feature extraction logic. <br><br>
+                                        <div class=" text-primary font-weight-bold text-xls mb-1 h5"><span>Feature Extraction:</span></div>
+                                        <div><img src="assets/img/features_1.2.png" class="img-fluid"></div>
+                                        <div class="text-dark h6 mb-0"><span>
+                                            The feature extraction logic is same as that of Approach 1.1, with just one difference 
+                                            as per the direction of vehicles. As seen from the above figure, for crossing road,
+                                            the information of vehicles moving in the direction away from the person(i.e., the vehicles
+                                            marked in red) is not required. So, we have not considered those vehicles as features. <br><br>
+
+                                        </span>
+                                        </div>
+                                        <br>
+                                        <div class=" text-primary font-weight-bold text-xls mb-1 h5"><span>Classification Model:</span></div>
+                                        <div><img src="assets/img/approach_1.2.png" class="img-fluid"></div><br>
+                                        <div class="text-dark h6 mb-0"><span>
+                                            Data Preprocessing tasks: <br><br>
+                                            <ol>
+                                                <li>Train-test split (using 50 videos for training, 26 for testing)</li>
+                                                <li>Generating features and labels dataframe and eliminating the vehicles not in the direction 
+                                                    of our interest
+                                                </li>
+                                                <li>Feature Scaling using MinMax Scaler</li>
+                                            </ol>  
+                                            Model Training:
+                                            <ul>
+                                                <li>We used SVM(Support Vector Machine) to train a classification model to predict
+                                                    if a frame is safe/unsafe.
+                                                </li>
+                                                <li>Training accuracy : 75.6%, Testing accuracy: 72.3%</li>
+                                            </ul>
+                                        </span>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    <!-- <footer class="bg-white sticky-footer">
-        <div class="container my-auto">
-            <div class="text-center my-auto copyright">
-                <span>Copyright © Data Intelligence Developers 2020</span>
+        <footer class="bg-white sticky-footer">
+            <div class="container my-auto">
+                <div class="text-center my-auto copyright">
+                    <span>Copyright © Siddhi Brahmbhatt | Yagnesh Patil</span>
+                </div>
             </div>
-        </div>
-    </footer>  -->
+        </footer> 
     </div>
     <div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a></div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

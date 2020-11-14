@@ -14,7 +14,7 @@ body{
 
 .sidebar{
     transition-duration: 0.5s; 
-    position: static;  
+    position: static;
 }
 
 .btn-link{
@@ -41,5 +41,9 @@ body{
     
     .sidebar .nav-item .nav-link{
         font-size: .7rem;
+    }
+
+    .sidebar-brand{
+        display: none;
     }
 }

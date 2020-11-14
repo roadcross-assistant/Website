@@ -1,0 +1,20 @@
+.about-img-div{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: -50px;
+    z-index: 2;
+}
+
+.social-div{
+    font-size: 1.5rem;
+}
+
+.social-div a{
+    color: #858796;
+    margin: 0 10px;
+}
+
+.social-div a:hover{
+    color: initial;
+}

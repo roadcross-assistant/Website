@@ -59,4 +59,8 @@ body{
     .sidebar-brand{
         display: none;
     }
+
+    .sidebar .nav-item .nav-link {
+        padding: 0.8rem 0;
+    }
 }

@@ -16,22 +16,33 @@
     <div id="wrapper">
         <nav class="navbar1 navbar-dark align-items-start sidebar sidebar-dark accordion bg-gradient-primary p-0">
             <div class="container-fluid d-flex flex-column p-0">
-                <!-- <a class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0" href="https://yagnesh45.github.io/data_developers/"> -->
-                <a class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0" href="#">
-                    <!--<div class="sidebar-brand-icon rotate-n-15"><i class="fas fa-road"></i></div>-->
-                    <!--<div class="sidebar-brand-text mx-3"><span>D<sup>2</sup> Team</span></div>-->
+                <button class="btn btn-link d-md-none rounded-circle mt-3 text-light" id="sidebarToggleTop" type="button"><i class="fas fa-arrow-left"></i></button>
+                <br class="d-md-none">
+                <a class="navbar-brand justify-content-center align-items-center text-center sidebar-brand m-0 p-2" href="index.html">
+                    <div class="sidebar-brand-icon">
+                        <img src="assets/img/roadcrossing-logo.png" class="bg-white m-1 p-1 rounded-circle" height="45px" alt="">
+                    </div>
+                    <div class="sidebar-brand-text display-4">
+                        CA
+                    </div>
                 </a>
                 <hr class="sidebar-divider my-0">
-                <ul class="nav navbar-nav text-light" id="accordionSidebar" >
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="index.html"><i class="fas fa-road"></i><span>Home</span></a></li>
+                <ul class="nav navbar-nav text-light " id="accordionSidebar">
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="index.html"><i class="fas fa-home"></i><span>Home</span></a></li>
                     <li class="nav-item" role="presentation"><a class="nav-link" href="dataset.html"><i class="fas fa-database"></i><span>Dataset</span></a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link active" href="#"><i class="fas fa-project-diagram"></i><span>Model Training</span></a></li>
+                    <li class="nav-item dropdown approach-dropdown">
+                        <a class="nav-link dropdown-toggle active" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-project-diagram"></i><span>Model Training</span></a>
+                        <div class="dropdown-menu approach-menu shadow" aria-labelledby="navbarDropdown">
+                          <a class="dropdown-item approach-item" href="approach-1.html">Approach 1</a>
+                          <a class="dropdown-item approach-item" href="approach-2.html">Approach 2</a>
+                          <a class="dropdown-item approach-item" href="approach-3.html">Approach 3</a>
+                        </div>
+                      </li>
                     <li class="nav-item" role="presentation"><a class="nav-link" href="about.html"><i class="fas fa-user-friends"></i><span>About Us</span></a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="future-scope.html"><i class="fab fa-quinscape"></i><span>Future Scopes</span></a></li>
                 </ul>
-                <div class="btn-div text-center d-none d-md-inline"><button class="btn rounded-circle border-0" id="sidebarToggle" type="button"></button></div>
             </div>
         </nav>
+
         <div class="d-flex flex-column" id="content-wrapper">
             <div id="content">
                 <nav class="navbar navbar-light navbar-expand bg-white shadow mb-4 topbar static-top">
@@ -46,14 +57,14 @@
                             <div class="card-body">
                                 <div class="row align-items-center no-gutters">
                                     <div class="col mr-2">
-                                        <h4 class="text-capitalize text-primary font-weight-bold text-xls mb-1 ml-3 mt-2">
-                                            APPROACH 1.1:
+                                        <h4 class="text-capitalize text-primary font-weight-bold text-xls my-2">
+                                            APPROACH 1.1
                                         </h4>
-                                        <hr style="height:1px; background-color:#efefef; width: 100%; text-align: center;"/>
+                                        <hr style="height:1px; background-color:#efefef;"/>
                                         Approach 1.1 is our simplest approach where we extracted features from individual frames
                                         from the video and trained classification model to predict if a particular frame is safe/unsafe
                                         for crossing road. <br><br>
-                                        <div class=" text-primary font-weight-bold text-xls mb-1 h5"><span>Feature Extraction:</span></div>
+                                        <div class=" text-primary font-weight-bold text-xls h5"><span>Feature Extraction</span></div>
                                         <div><img src="assets/img/features.png" class="img-fluid"></div>
                                         <div class="text-dark h6 mb-0"><span>
                                             For extracting features from a particular frame, we divide the frame into 6 regions as shown above. It is 
@@ -65,20 +76,21 @@
                                                 <li>Total area covered by vehicles in the region</li>
                                                 <li>Distance(from origin) of the vehicle closest to the origin</li>
                                             </ol>  
-                                            So, total 18(=6*3) features are extracted from each frame.
+                                            So, total 18( = 6 * 3) features are extracted from each frame.
                                         </span>
                                         </div>
-                                        <br>
-                                        <div class=" text-primary font-weight-bold text-xls mb-1 h5"><span>Classification Model:</span></div>
-                                        <div><img src="assets/img/approach_1.1.png" class="img-fluid"></div><br>
+                                        <br><br>
+                                        <div class=" text-primary font-weight-bold text-xls mb-2 h5"><span>Classification Model</span></div>
+                                        <div class="text-center"><img src="assets/img/approach_1.1.png" class="img-fluid"></div><br>
                                         <div class="text-dark h6 mb-0"><span>
-                                            Data Preprocessing tasks: <br><br>
+                                            <b>Data Preprocessing tasks:</b> <br><br>
                                             <ol>
                                                 <li>Train-test split (using 50 videos for training, 26 for testing)</li>
                                                 <li>Generating features and labels dataframe </li>
                                                 <li>Feature Scaling using MinMax Scaler</li>
                                             </ol>  
-                                            Model Training:
+                                            <b>Model Training:</b>
+                                            <br><br>
                                             <ul>
                                                 <li>We used SVM(Support Vector Machine) to train a classification model to predict
                                                     if a frame is safe/unsafe.
@@ -88,7 +100,7 @@
                                         </span>
                                         </div>
                                         <br>
-                                        <div class=" text-primary font-weight-bold text-xls mb-1 h5"><span>Sample Prediction Outputs:</span></div>
+                                        <div class=" text-primary font-weight-bold text-xls mb-1 h5"><span>Sample Prediction Outputs</span></div>
                                         <br>
                                         <div class="row">
                                             <div class="images-row col-lg-4 col-sm-12">
@@ -132,13 +144,13 @@
                             <div class="card-body">
                                 <div class="row align-items-center no-gutters">
                                     <div class="col mr-2">
-                                        <h4 class="text-capitalize text-primary font-weight-bold text-xls mb-1 ml-3 mt-2">
+                                        <h4 class="text-capitalize text-primary font-weight-bold text-xls my-2">
                                             APPROACH 1.2:
                                         </h4>
-                                        <hr style="height:1px; background-color:#efefef; width: 100%; text-align: center;"/>
-                                        Approach 1.1 is an advancement over Approach 1.2 where we have made an attempt to improve our
+                                        <hr style="height:1px; background-color:#efefef;"/>
+                                        Approach 1.2 is an advancement over Approach 1.1 where we have made an attempt to improve our
                                         feature extraction logic. <br><br>
-                                        <div class=" text-primary font-weight-bold text-xls mb-1 h5"><span>Feature Extraction:</span></div>
+                                        <div class=" text-primary font-weight-bold text-xls mb-1 h5"><span>Feature Extraction</span></div>
                                         <div><img src="assets/img/features_1.2.png" class="img-fluid"></div>
                                         <div class="text-dark h6 mb-0"><span>
                                             The feature extraction logic is same as that of Approach 1.1, with just one difference 
@@ -149,10 +161,10 @@
                                         </span>
                                         </div>
                                         <br>
-                                        <div class=" text-primary font-weight-bold text-xls mb-1 h5"><span>Classification Model:</span></div>
-                                        <div><img src="assets/img/approach_1.2.png" class="img-fluid"></div><br>
+                                        <div class=" text-primary font-weight-bold text-xls mb-1 h5"><span>Classification Model</span></div>
+                                        <div class="text-center"><img src="assets/img/approach_1.2.png" class="img-fluid"></div><br>
                                         <div class="text-dark h6 mb-0"><span>
-                                            Data Preprocessing tasks: <br><br>
+                                            <b> Preprocessing tasks: </b> <br><br>
                                             <ol>
                                                 <li>Train-test split (using 50 videos for training, 26 for testing)</li>
                                                 <li>Generating features and labels dataframe and eliminating the vehicles not in the direction 
@@ -160,7 +172,7 @@
                                                 </li>
                                                 <li>Feature Scaling using MinMax Scaler</li>
                                             </ol>  
-                                            Model Training:
+                                            <b>Model Training:</b><br><br>
                                             <ul>
                                                 <li>We used SVM(Support Vector Machine) to train a classification model to predict
                                                     if a frame is safe/unsafe.
@@ -168,8 +180,8 @@
                                                 <li>Training accuracy : 75.6%, Testing accuracy: 72.3%</li>
                                             </ul>
                                         </span>
-                                        </div>
-                                        <div class=" text-primary font-weight-bold text-xls mb-1 h5"><span>Sample Prediction Outputs:</span></div>
+                                        </div><br>
+                                        <div class=" text-primary font-weight-bold text-xls mb-1 h5"><span>Sample Prediction Outputs</span></div>
                                         <br>
                                         <div class="row">
                                             <div class="images-row col-lg-4 col-sm-12">
@@ -213,15 +225,15 @@
                             <div class="card-body">
                                 <div class="row align-items-center no-gutters">
                                     <div class="col mr-2">
-                                        <h4 class="text-capitalize text-primary font-weight-bold text-xls mb-1 ml-3 mt-2">
-                                            APPROACH 2.1 (NEW PAGE after dropdown):
+                                        <h4 class="text-capitalize text-primary font-weight-bold text-xls my-2">
+                                            APPROACH 2.1 (New Page after dropdown)
                                         </h4>
                                         <hr style="height:1px; background-color:#efefef; width: 100%; text-align: center;"/>
                                         We plan multiple frame based approach <br><br>
                                         
                                         <div class="work-in-progress-div text-center">
-                                            <h2>Work in Progress... <img src="assets/img/teamwork.png" height="40px" /></h2>
-                                            <img src="assets/img/work-in-progress-2.jpg" class="my-2 img-fluid" style="width: 60%;"/>
+                                            <h2>Work in Progress... </h2>
+                                            <img src="assets/img/work-in-progress-2.jpg" class="my-2 img-fluid" style="width: 70%;"/>
                                         </div>
                                         
                                     </div>
@@ -235,7 +247,7 @@
 
             
         </div>
-        <footer class="bg-white sticky-footer">
+        <footer class="bg-white sticky-footer shadow">
             <div class="container my-auto">
                 <div class="text-center my-auto copyright">
                     <span>Copyright © Siddhi Brahmbhatt | Yagnesh Patil</span>
@@ -243,7 +255,7 @@
             </div>
         </footer> 
     </div>
-    <div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a></div>
+    <div><a class="border rounded-circle d-inline scroll-to-top" href="#page-top"><i class="fas fa-arrow-up"></i></a></div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script>

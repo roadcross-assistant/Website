@@ -17,6 +17,14 @@ body{
     position: static;
 }
 
+.sidebar-brand{
+    display: flex;
+}
+
+.sidebar-brand-text{
+    font-weight: 700;
+}
+
 .btn-link{
     font-size: 1.3em;
     padding: 1px;

@@ -8,9 +8,6 @@ body{
     margin: 0;
 }
 
-.topbar{
-    height: 6rem;
-}
 .card{
     border-radius: 10px;
 }
@@ -60,5 +57,9 @@ body{
 
     .sidebar-brand{
         display: none;
+    }
+
+    .topbar{
+        height: 5rem;
     }
 }

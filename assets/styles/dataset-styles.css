@@ -1,13 +1,5 @@
-body{
-    font-family: 'Montserrat', sans-serif;
-}
-
 .camera-img-div, .dataset-description-div{
     height: 100%;
-}
-
-.dataset-gifs-div .row{
-    margin-bottom: 20px;
 }
 
 .gifs-row-1, .gifs-row-2{
@@ -15,20 +7,24 @@ body{
 }
 
 .gifs-row-1 img, .gifs-row-2 img{
-    margin: 10px;
     border: 1px solid grey;
     border-radius: 5px;
-}
-
-images-row img{
-    margin: 10px;
-    border: 1px solid grey;
-    border-radius: 5px;
-    padding: 4px;;
 }
 
 .tables-div{
     padding: 0 30px;
+}
+
+.col-sm-4{
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+@media screen and (max-width: 767px){
+    .col-sm-4{
+        padding-left: 0.25rem;
+        padding-right: 0.25rem;
+    }
 }
 
 

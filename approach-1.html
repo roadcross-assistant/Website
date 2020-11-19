@@ -69,13 +69,13 @@
                                         </h4>
                                         <hr style="height:1px; background-color:#efefef;"/>
                                         Approach 1.1 is our simplest approach where we extracted features from individual frames
-                                        from the video and trained classification model to predict if a particular frame is safe/unsafe
+                                        of the video and trained classification model to predict if a particular frame is safe/unsafe
                                         for crossing road. <br><br>
                                         <div class=" text-primary font-weight-bold text-xls h5"><span>Feature Extraction</span></div>
                                         <div><img src="assets/img/features.png" class="img-fluid"></div>
                                         <div class="text-dark h6 mb-0"><span>
                                             For extracting features from a particular frame, we divide the frame into 6 regions as shown above. It is 
-                                            very intuitive that even we as humans, when crossing roads, consciously/unconsciously consider information
+                                            very intuitive because even we as humans, when crossing roads, consciously/unconsciously consider information
                                             about vehicles in different regions of our field of vision. We extract following features from each of the 6 
                                             regions: <br><br>
                                             <ol>
@@ -83,7 +83,7 @@
                                                 <li>Total area covered by vehicles in the region</li>
                                                 <li>Distance(from origin) of the vehicle closest to the origin</li>
                                             </ol>  
-                                            So, total 18( = 6 * 3) features are extracted from each frame.
+                                            So, total 6*3=18 features are extracted from each frame.
                                         </span>
                                         </div>
                                         <br><br>
@@ -161,7 +161,7 @@
                                         <div class="text-dark h6 mb-0"><span>
                                             The feature extraction logic is same as that of Approach 1.1, with just one difference 
                                             as per the direction of vehicles. As seen from the above figure, for crossing road,
-                                            the information of vehicles moving in the direction away from the person(i.e., the vehicles
+                                            the information of vehicles on the other side of the divider (i.e., the vehicles
                                             marked in red) is not required. So, we have not considered those vehicles as features. <br><br>
 
                                         </span>

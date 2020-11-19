@@ -74,7 +74,7 @@
                                         <div class=" text-primary font-weight-bold text-xls h5"><span>Feature Extraction</span></div>
                                         <div><img src="assets/img/features.png" class="img-fluid"></div>
                                         <div class="text-dark h6 mb-0"><span>
-                                            For extracting features from a particular frame, we divide the frame into 6 regions as shown above. It is 
+                                            For extracting features from a particular frame, we <b> divide the frame into 6 regions </b> as shown above. It is 
                                             very intuitive because even we as humans, when crossing roads, consciously/unconsciously consider information
                                             about vehicles in different regions of our field of vision. We extract following features from each of the 6 
                                             regions: <br><br>
@@ -83,7 +83,7 @@
                                                 <li>Total area covered by vehicles in the region</li>
                                                 <li>Distance(from origin) of the vehicle closest to the origin</li>
                                             </ol>  
-                                            So, total 6*3=18 features are extracted from each frame.
+                                            So,<b> total 6 * 3 = 18 features </b> are extracted from each frame.
                                         </span>
                                         </div>
                                         <br><br>
@@ -102,7 +102,7 @@
                                                 <li>We used SVM(Support Vector Machine) to train a classification model to predict
                                                     if a frame is safe/unsafe.
                                                 </li>
-                                                <li>Training accuracy : 74.4%, Testing accuracy: 53.9%</li>
+                                                <li>Training accuracy : <b> 74.4% </b>, Testing accuracy: <b> 53.9% </b></li>
                                             </ul>
                                         </span>
                                         </div>
@@ -160,7 +160,7 @@
                                         <div><img src="assets/img/features_1.2.png" class="img-fluid"></div>
                                         <div class="text-dark h6 mb-0"><span>
                                             The feature extraction logic is same as that of Approach 1.1, with just one difference 
-                                            as per the direction of vehicles. As seen from the above figure, for crossing road,
+                                            as per the <b> direction of vehicles</b>. As seen from the above figure, for crossing road,
                                             the information of vehicles on the other side of the divider (i.e., the vehicles
                                             marked in red) is not required. So, we have not considered those vehicles as features. <br><br>
 
@@ -183,7 +183,7 @@
                                                 <li>We used SVM(Support Vector Machine) to train a classification model to predict
                                                     if a frame is safe/unsafe.
                                                 </li>
-                                                <li>Training accuracy : 75.6%, Testing accuracy: 72.3%</li>
+                                                <li>Training accuracy : <b> 75.6% </b>, Testing accuracy: <b> 72.3% </b></li>
                                             </ul>
                                         </span>
                                         </div><br>
@@ -224,11 +224,11 @@
                     </div>
                 </div>
 
-                <div class="col text-center">
-                <a href="approach-2.html"class="btn btn-info read-more-btn btn-lg">Approach 2
-                <i class="fas fa-share" style="margin-left: 5px; align-self: center;" aria-hidden="true"></i>
-                </a></div>
-            <br><br>
+                <div class="col text-sm-right text-center mb-5">
+                    <a href="approach-2.html"class="btn btn-primary shadow btn-lg"> View Approach 2
+                        <i class="fas fa-arrow-right text-light" style="margin-left: 5px; align-self: center;" aria-hidden="true"></i>
+                    </a>
+                </div>
         </div>
         <footer class="bg-white sticky-footer shadow">
             <div class="container my-auto">

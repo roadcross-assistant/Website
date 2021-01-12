@@ -61,15 +61,28 @@
                                 <div class="row align-items-center no-gutters">
                                     <div class="col mx-2">
                                         <h4 class="text-primary font-weight-bold mb-2">Abstract</h4>
-                                        <div class="h5 mb-0"><span>Computer Vision is unlocking unprecedented rates of progress in all aspects of life - 
-                                            be it healthcare, defence, entertainment or autonomous vehicles. We are aiming to use Computer Vision to help blind 
-                                            or aged people for crossing roads, more precisely Indian roads where there may not be many traffic signals, and where 
-                                            traffic rules and speed limits may not be followed strictly.  For the same, we have collected a dataset of videos 
-                                            capturing various traffic patterns on roads of Anand, Gujarat. We propose a ML/DL based model to predict safe duration 
-                                            for crossing road from the given video. As a future scope, if we get a model with good accuracy, we plan to integrate 
-                                            this model into a wearable assistant so that blind/aged people can use it for crossing roads in realtime.</span>
+                                        <div class="h5 mb-0"><span>Roads in medium-sized Indian towns often have 
+                                            lots of traffic but no (or disregarded) traffic stops. This makes it 
+                                            hard to cross the roads safely, because it involves predicting safe 
+                                            durations using one’s sight. In this project, we are training image-
+                                            based ML models to predict road crossing safety. Any suitable dataset 
+                                            did not exist (datasets for autonomous cars are not recorded from a 
+                                            pedestrian’s point of view), so we have created our own dataset. Our 
+                                            dataset consists of 104 videos (>26K frames) capturing various traffic 
+                                            patterns of Anand, Gujarat with a head-mounted camera. We have also 
+                                            annotated all videos with timestamps for durations safe for crossing. 
+                                            We have achieved a testing accuracy of 86% by training a SVM on multi-
+                                            frame features. Currently we are working to further improve accuracy 
+                                            through deep learning. After getting a prediction model with good enough 
+                                            accuracy, we will integrate it into a wearable assistant, which is 
+                                            intended to be worn by people who are blind or suffer from degraded vision,
+                                             to help them cross busy roads.</span>
                                         </div>
-                                        <br> <br>
+                                        <br>
+                                        <button type="button" class="btn btn-success">Update</button> This project has recently been awarded financial assistance under the 
+                                        Innovation track of the Govt. of Gujarat’s <a href="https://www.ssipgujarat.in/new_student1.php" target="_blank"><u> Startups & Innovation 
+                                        Policy</u>.</a>
+                                        <br><br>
                                         <h4 class="text-primary font-weight-bold mb-2">Workflow</h4>
                                         <div class="text-center"><img src="assets/img/workflow.png" class="img-fluid"></div>
                                     </div>
@@ -91,11 +104,7 @@
                             </div>
                             <h4 class="small font-weight-bold">Model Training<span class="float-right">40%</span></h4>
                             <div class="progress mb-4">
-                                <div class="progress-bar bg-warning" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%;"><span class="sr-only">20%</span></div>
-                            </div>
-                            <h4 class="small font-weight-bold">Deployment on Virtual Server<span class="float-right">0%</span></h4>
-                            <div class="progress mb-4">
-                                <div class="progress-bar bg-primary" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"><span class="sr-only">0%</span></div>
+                                <div class="progress-bar bg-warning" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%;"><span class="sr-only">40%</span></div>
                             </div>
                             <h4 class="small font-weight-bold">Integration into Wearable Assistant<span class="float-right">0%</span></h4>
                             <div class="progress mb-4">

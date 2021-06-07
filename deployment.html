@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="assets/styles/dataset-styles.css" />
     <link rel="stylesheet" href="assets/styles/home-styles.css" />
     <link rel="stylesheet" href="assets/styles/zoom.css" />
+    <link rel="stylesheet" href="assets/styles/deployment-styles.css" />
   </head>
 
   <body id="page-top">
@@ -136,7 +137,7 @@
 
           <div class="container-fluid">
             <div class="deployment-title-div text-center">
-              <h1 style="color: #5a5c69; font-size: 2em; font-weight: 500">
+              <h1 style="color: #5a5c69">
                 Deployment
               </h1>
               <br />
@@ -144,34 +145,68 @@
             <div class="deployment-main-div col-md-12 col-xl-12 mb-4">
               <div class="card shadow mb-4">
                 <div class="card-body">
-                  For final working prototype of Road Crossing Assistant which
-                  can be used by blind people in real time, we have deployed our
-                  pre-trained deep learning model on Nvidia Jetson Nano B01.
-                  <br /><br />
+                  In final working prototype of the Road Crossing Assistant, which can be used by blind people in real time, we have 
+                  deployed our single frame cnn model on Nvidia Jetson Nano B01. We converted our pretrained TensorFlow model 
+                  into a TensorRT model to optimize the processing power and achieve low latency with high throughput. The throughput
+                  obtained by TensorRT model is 8 fps as compared to 3 fps by simple TensorFlow model.
+                  <br /><br/>
+                  
+                  <center>(Final pic of portable road crossing assistant)</center>
+
+                  <div class="text-center">
+                    
+                    <img src="assets/img/hardware_setup.png" class="img-fluid" alt="hardware setup" width = 50%>
+                  </div>
+                  
+                  <br><br>
+
                   <div class="text-primary font-weight-bold text-xls h5">
                     <span>Hardware Components used</span>
                   </div>
-                  <ol>
-                    <li>Nvidia Jetson Nano B01</li>
-                    <li>Camera module (Raspberry Pi V2 – 8MP Camera)</li>
-                    <li>64 GB UHS-1 MicroSD Card for storage</li>
-                    <li>USB audio adapter and headphones</li>
-                  </ol>
-                  <div class="text-center">
-                    <img
-                      src="assets/img/hardware_setup.png"
-                      class="img-fluid"
-                      alt="hardware setup"
-                    />
+                  <br>
+
+                  <div class="row">
+                    <div class="images-row col-lg-4 col-sm-12">
+                        <img src="assets/img/hardware_setup.png" width="100%">
+                        <figcaption>Nvidia Jetson Nano B01</figcaption><br>
+                    </div>
+                    <div class="images-row col-lg-4 col-sm-12">
+                        <img src="assets/img/hardware_setup.png" width="100%">
+                        <figcaption>SJCam</figcaption><br>
+                    </div>
+                    <div class="images-row col-lg-4 col-sm-12">
+                        <img src="assets/img/hardware_setup.png" width="100%">
+                        <figcaption>Cooling fan</figcaption><br>
+                    </div>
+                </div>
+
+                <div class="row">
+                  <div class="images-row col-lg-4 col-sm-12">
+                      <img src="assets/img/hardware_setup.png" width="100%">
+                      <figcaption>Power bank</figcaption><br>
                   </div>
-                  <br />
-                  Here, we have simply connected camera, audio adapter, power
-                  input and cooling fan to Nvidia Jetson Nano.
+                  <div class="images-row col-lg-4 col-sm-12">
+                      <img src="assets/img/hardware_setup.png" width="100%">
+                      <figcaption>USB audio adapter and headphones</figcaption><br>
+                  </div>
+                  <div class="images-row col-lg-4 col-sm-12">
+                      <img src="assets/img/hardware_setup.png" width="100%">
+                      <figcaption>64 GB UHS-1 MicroSD Card</figcaption><br>
+                  </div>
+              </div>
+
+              - For headless setup of the Jetson Nano, we additionaly required an ethernet cable. <br>
+              - For making a wearable assistant for use in real time, ............... 
+
+              
+
                   <br /><br />
+
                   <div class="text-primary font-weight-bold text-xls h5">
                     <span>Deployment workflow</span>
                   </div>
                   <br />
+
                   <div class="row">
                     <div class="col-lg-6 col-12 workflow-img-div">
                       <img
@@ -182,30 +217,56 @@
                     </div>
                     <div class="col-lg-6 col-12">
                       <br class="d-md-none" />
+                      <br><br><br>
                       <div class="card shadow p-4 bg-info text-light">
-                        <p>
-                          We converted our pretrained TensorFlow model into a
-                          TensorRT model to optimize the processing power and
-                          achieve low latency and high throughput needed for
-                          running the deep learning models on devices like
-                          Jetson Nano.
+                            Jetson Nano will run the pre-trained TensorRT model on the real-time video stream (obtained from the
+                          camera module attached to it) and predict whether it is safe to cross the road seen in the video stream. It
+                          will also control the audio output of headphones to communicate with the user through simple audio commands.
+                          
                           <br />
-                          Jetson Nano will
-                          <strong>run the pre-trained TensorRT model</strong>
-                          on the real-time
-                          <strong>video stream</strong> (obtained from the
-                          camera module attached to it) and predict whether it
-                          is safe to cross the road seen in the video stream. It
-                          will also control the <strong>audio output</strong> of
-                          headphones to communicate with the user through simple
-                          audio commands.
-                        </p>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+            
+            <div class="deployment-gifs-div col-md-12 col-xl-12 mb-4">
+              <div class="card shadow mb-4">
+                <div class="card-body">
+                  <div class="text-primary font-weight-bold text-xls h5">
+                    <span>Sample prediction outputs on videos</span>
+                  </div>
+                  <p>
+                    .................................
+
+                    use visualiza_cnn_predictions_on_videos.py from siddhi/deploy to generate these
+                  </p>
+                  <div class="row mb-3">
+                    <div class="gifs-row-1 col-lg-6 col-sm-12 mb-3">
+                        <img src="assets/img/website1.gif" width="90%">
+                    </div>
+                    <div class="gifs-row-1 col-lg-6 col-sm-12">
+                        <img src="assets/img/website2.gif" width="90%">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="gifs-row-2 col-lg-6 col-sm-12 mb-3">
+                        <img src="assets/img/website3.gif" width="90%">
+                    </div>
+                    <div class="gifs-row-2 col-lg-6 col-sm-12">
+                        <img src="assets/img/website4.gif" width="90%">
+                    </div>
+                </div>
+
+                <div class="row m-2 ml-4">
+                  <p class="video-description">*We have compressed the videos for display on website as GIFs</p>
+              </div>
+
+                </div>
+              </div>
+            </div>
+           
 
             <div class="deployment-video-div col-md-12 col-xl-12 mb-4">
               <div class="card shadow mb-4">
@@ -214,12 +275,7 @@
                     <span>Demonstration video</span>
                   </div>
                   <p>
-                    Here is the demonstration video for working of roadcrossing
-                    assistant on Nvidia Jetson Nano. The project deployed on the
-                    device will not have any GUI, but this video illustrates how
-                    the road crossing assistant will work on it and provide safe
-                    duration predictions in form of audio notification to the
-                    user.
+                    ..................................attach a proper demo video's youtube link
                   </p>
                   <div class="video-div">
                     <iframe

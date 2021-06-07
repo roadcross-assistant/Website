@@ -1,349 +1,489 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
     <title>Approach 3 • RCA</title>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
-    <link rel="stylesheet" href="assets/styles/model_training-styles.css">
-    <link rel="stylesheet" href="assets/styles/home-styles.css">
-</head>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Montserrat:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.12.0/css/all.css"
+    />
+    <link rel="stylesheet" href="assets/styles/model_training-styles.css" />
+    <link rel="stylesheet" href="assets/styles/home-styles.css" />
+  </head>
 
-<body id="page-top">
+  <body id="page-top">
     <div id="wrapper" class="text-dark">
-        <nav class="navbar1 navbar-dark align-items-start sidebar sidebar-dark accordion bg-gradient-primary p-0">
-            <div class="container-fluid d-flex flex-column p-0">
-                <button class="btn btn-link d-md-none rounded-circle mt-3 text-light" id="sidebarToggleTop" type="button"><i class="fas fa-arrow-left"></i></button>
-                <br class="d-none d-sm-block">
-                <br class="d-none d-sm-block">
-                <br class="d-sm-none">
-                <!-- <a class="navbar-brand justify-content-center align-items-center text-center sidebar-brand m-0 p-2" href="index.html">
-                    <div class="sidebar-brand-icon">
-                        <img src="assets/img/roadcrossing-logo.png" class="bg-white m-1 p-1 rounded-circle" height="45px" alt="">
-                    </div>
-                    <div class="sidebar-brand-text display-4">
-                        CA
-                    </div>
-                </a> -->
-                <!-- <hr class="sidebar-divider my-0"> -->
-                <ul class="nav navbar-nav text-light " id="accordionSidebar">
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="index.html"><i class="fas fa-home"></i><span>Home</span></a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="dataset.html"><i class="fas fa-database"></i><span>Dataset</span></a></li>
-                    <li class="nav-item dropdown approach-dropdown">
-                        <a class="nav-link active dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="model_training.html"><i class="fas fa-project-diagram"></i><span>Model <br class="d-sm-none"> Training</span></a>
-                        <div class="dropdown-menu approach-menu shadow" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item approach-item" href="overview.html">Overview</a>
-                            <a class="dropdown-item approach-item" href="approach-1.html">Approach 1</a>
-                          <a class="dropdown-item approach-item" href="approach-2.html">Approach 2</a>
-                          <a class="dropdown-item approach-item" href="approach-3.html">Approach 3</a>
-                          <!-- <a class="dropdown-item approach-item" href="approach-3.html">Approach 3</a> -->
-                        </div>
-                      </li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="deployment.html"><i class="fas fa-blind"></i><span>Deployment</span></a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="about.html"><i class="fas fa-user-friends"></i><span>About Us</span></a></li>
-                </ul>
-                <div class="text-center d-none d-md-inline"><button class="btn rounded-circle border-0" id="sidebarToggle" type="button"></button></div>
-            </div>
-        </nav>
-
-
-        <div class="d-flex flex-column" id="content-wrapper">
-            <div id="content">
-                <nav class="navbar navbar-light navbar-expand bg-white shadow mb-4 topbar static-top">
-                    <div class="container-fluid"><button class="btn btn-link d-md-none rounded-circle mr-3" id="sidebarToggleTop" type="button"><i class="fas fa-bars"></i></button>
-                            <p id="project-title">Road Crossing Assistant</p>
-                    </div>
-                </nav>
-            <div class="container-fluid">
-
-                <div class="work-in-progress-div text-center">
-                    <h1 style="color: #5a5c69; font-size: 2em; font-weight: 500;"> Approach 3: Deep Learning based approach </h1> <br>
-                </div>
-                <div class="row">
-                    <div class="col-md-12 col-xl-12 mb-4">
-                        <div class="card shadow mb-4">
-                            <div class="card-body">
-                                <div class="row align-items-center no-gutters">
-                                    <div class="col mr-1">
-                                        <div class="approach-heading-div">
-                                                <h4 class="text-capitalize text-primary font-weight-bold text-xls my-2">
-                                                    <a id="approach1.1">APPROACH 3.1 </a> 
-                                                </h4>
-                                    </div>
-                                        <hr style="height:1px; background-color:#efefef;"/>
-                                        MobileNet custom model <br><br>
-                                        <div class=" text-primary font-weight-bold text-xls h5"><span>Feature Extraction</span></div>
-                                        <div><img src="assets/img/features.png" class="img-fluid"></div>
-                                        <div class="text-dark h6 mb-0"><span>
-                                            For extracting features from a particular frame, we <b> divide the frame into 6 regions </b> as shown above. It is 
-                                            very intuitive because even we as humans, when crossing roads, consciously/unconsciously consider information
-                                            about vehicles in different regions of our field of vision. We extract following features from each of the 6 
-                                            regions: <br><br>
-                                            <ol>
-                                                <li>Number of vehicles in the region</li>
-                                                <li>Total area covered by vehicles in the region</li>
-                                                <li>Distance(from origin) of the vehicle closest to the origin</li>
-                                            </ol>  
-                                            So,<b> total 6 * 3 = 18 features </b> are extracted from each frame.
-                                        </span>
-                                        </div>
-                                        <br><br>
-                                        <div class=" text-primary font-weight-bold text-xls mb-2 h5"><span>Classification Model</span></div>
-                                        <div class="text-center"><img src="assets/img/approach_1.1.png" width="100%"></div><br>
-                                        <div class="text-dark h6 mb-0"><span>
-                                            <b>Data Preprocessing tasks:</b> <br><br>
-                                            <ol>
-                                                <li>Train-test split (using 80 videos for training, 24 for testing)</li>
-                                                <li>Generating features and labels dataframe </li>
-                                                <li>Feature Scaling using MinMax Scaler</li>
-                                            </ol>  
-                                            <b>Model Training:</b>
-                                            <br><br>
-                                            <ul>
-                                                <li>We used SVM(Support Vector Machine) to train a classification model to predict
-                                                    if a frame is safe/unsafe.
-                                                </li>
-                                                <li>Training accuracy : <b> 75.57% </b>, Testing accuracy: <b> 71.5% </b></li>
-                                                <li>Mean average precision on test data: <b>0.58</b></li>
-                                                <li>Python implementaion for the same can be found <a href="https://github.com/roadcross-assistant/Project/blob/master/Approach_1.1_individual_frames.ipynb" target="_blank"> <u>here</u>.</a></li>
-                                            </ul>
-                                        </span>
-                                        </div>
-                                        <br>
-                                        <div class=" text-primary font-weight-bold text-xls mb-1 h5"><span>Sample Prediction Outputs</span></div>
-                                        <br>
-                                        <div class="row">
-                                            <div class="images-row col-lg-4 col-sm-12">
-                                                <img src="assets/img/approach_1.1_frames/tp1.jpg" width="100%">
-                                                <figcaption>True Positive</figcaption><br>
-                                            </div>
-                                            <div class="images-row col-lg-4 col-sm-12">
-                                                <img src="assets/img/approach_1.1_frames/tp2.jpg" width="100%">
-                                                <figcaption>True Positive</figcaption><br>
-                                            </div>
-                                            <div class="images-row col-lg-4 col-sm-12">
-                                                <img src="assets/img/approach_1.1_frames/tn1.jpg" width="100%">
-                                                <figcaption>True Negative</figcaption><br>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="images-row col-lg-4 col-sm-12">
-                                                <img src="assets/img/approach_1.1_frames/fp1.jpg" width="100%">
-                                                <figcaption>False Positive</figcaption><br>
-                                            </div>
-                                            <div class="images-row col-lg-4 col-sm-12">
-                                                <img src="assets/img/approach_1.1_frames/fp2.jpg" width="100%">
-                                                <figcaption>False Positive</figcaption><br>
-                                            </div>
-                                            <div class="images-row col-lg-4 col-sm-12">
-                                                <img src="assets/img/approach_1.1_frames/fn1.jpg" width="100%">
-                                                <figcaption>False Negative</figcaption><br>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-md-12 col-xl-12 mb-4">
-                        <div class="card shadow mb-4">
-                            <div class="card-body">
-                                <div class="row align-items-center no-gutters">
-                                    <div class="col mr-1">
-                                        <div class="approach-heading-div">
-                                        <h4 class="text-capitalize text-primary font-weight-bold text-xls my-2">
-                                            <a id="approach1.2">APPROACH 3.2 </a>
-                                        </h4>
-                                        </div>
-                                        <hr style="height:1px; background-color:#efefef;"/>
-                                        Our model with larger kernel size</b>. <br><br>
-                                        <div class=" text-primary font-weight-bold text-xls mb-1 h5"><span>Feature Extraction</span></div>
-                                        <div><img src="assets/img/features_1.2.png" class="img-fluid"></div>
-                                        <br>
-                                        <div class="text-dark h6 mb-0"><span>
-                                            The feature extraction logic is same as that of Approach 1.1, with just one difference 
-                                            as per the <b> direction of vehicles</b>. As seen from the above figure, for crossing road,
-                                            the information of vehicles on the other side of the divider (i.e., the vehicles
-                                            marked in red) is not required. So, we have not considered those vehicles as features. 
-                                            We have written a simple logic for detecting direction of vehicles; python 
-                                            implementation for the same can be found
-                                            <a href="https://github.com/roadcross-assistant/Project/blob/master/get_directions_from_videos.py" target="_blank"> <u>here</u>.</a>
-                                            <br><br>
-
-                                        </span>
-                                        </div>
-                                        <br>
-                                        <div class=" text-primary font-weight-bold text-xls mb-1 h5"><span>Classification Model</span></div>
-                                        <div class="text-center"><img src="assets/img/approach_1.2.png" width="100%"></div><br>
-                                        <div class="text-dark h6 mb-0"><span>
-                                            <b> Preprocessing tasks: </b> <br><br>
-                                            <ol>
-                                                <li>Train-test split (using 80 videos for training, 24 for testing)</li>
-                                                <li>Generating features and labels dataframe and eliminating the vehicles not in the direction 
-                                                    of our interest
-                                                </li>
-                                                <li>Feature Scaling using MinMax Scaler</li>
-                                            </ol>  
-                                            <b>Model Training:</b><br><br>
-                                            <ul>
-                                                <li>We used SVM(Support Vector Machine) to train a classification model to predict
-                                                    if a frame is safe/unsafe.
-                                                </li>
-                                                <li>Training accuracy : <b> 77.27% </b>, Testing accuracy: <b> 74.99% </b></li>
-                                                <li>Mean average precision on test data: <b>0.64</b></li>
-                                                <li>Python implementaion for the same can be found <a href="https://github.com/roadcross-assistant/Project/blob/master/Approach_1.2_individual_frames.ipynb" target="_blank"> <u>here</u>.</a></li>
-                                            </ul>
-                                        </span>
-                                        </div><br>
-                                        <div class=" text-primary font-weight-bold text-xls mb-1 h5"><span>Sample Prediction Outputs</span></div>
-                                        <br>
-                                        <div class="row">
-                                            <div class="images-row col-lg-4 col-sm-12">
-                                                <img src="assets/img/approach_1.2_frames/tp1.jpg" width="100%">
-                                                <figcaption>True Positive</figcaption><br>
-                                            </div>
-                                            <div class="images-row col-lg-4 col-sm-12">
-                                                <img src="assets/img/approach_1.2_frames/tp2.jpg" width="100%">
-                                                <figcaption>True Positive</figcaption><br>
-                                            </div>
-                                            <div class="images-row col-lg-4 col-sm-12">
-                                                <img src="assets/img/approach_1.2_frames/tn1.jpg" width="100%">
-                                                <figcaption>True Negative</figcaption><br>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="images-row col-lg-4 col-sm-12">
-                                                <img src="assets/img/approach_1.2_frames/tn2.jpg" width="100%">
-                                                <figcaption>True Negative</figcaption><br>
-                                            </div>
-                                            <div class="images-row col-lg-4 col-sm-12">
-                                                <img src="assets/img/approach_1.2_frames/fp1.jpg" width="100%">
-                                                <figcaption>False Positive</figcaption><br>
-                                            </div>
-                                            <div class="images-row col-lg-4 col-sm-12">
-                                                <img src="assets/img/approach_1.2_frames/fn1.jpg" width="100%">
-                                                <figcaption>False Negative</figcaption><br>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-md-12 col-xl-12 mb-4">
-                        <div class="card shadow mb-4">
-                            <div class="card-body">
-                                <div class="row align-items-center no-gutters">
-                                    <div class="col mr-1">
-                                        <div class="approach-heading-div">
-                                        <h4 class="text-capitalize text-primary font-weight-bold text-xls my-2">
-                                            <a id="approach1.3">APPROACH 3.3 </a>
-                                        </h4>
-                                        </div>
-                                        <hr style="height:1px; background-color:#efefef;"/>
-                                        Our model with dilated convolutions
-                                        <a href="https://github.com/roadcross-assistant/Project/blob/master/frame-wise-annotations.ipynb" target="_blank"> <u>here</u>.</a></li>
-                                        <br><br>
-                                        <div class=" text-primary font-weight-bold text-xls mb-1 h5"><span>Feature Extraction</span></div>
-                                        <div><img src="assets/img/features_1.3_1.png" class="img-fluid"></div>
-                                        <div><img src="assets/img/features_1.3_2.png" class="img-fluid"></div>
-                                        
-                                        <div class="text-dark h6 mb-0">
-                                            <span>
-                                                <br>
-                                                The feature extraction logic is same as that of Approach 1.2, with just one feature addition 
-                                                as per the <b> speed of vehicles</b>. It is very intuitive that speed of vehicles is a very
-                                                important aspect to be considered while crossing roads. So, we have added 6 new features in 
-                                                this approach, we have considered maximum speed (of any vehicle) in each region as a feature.
-                                                The Python implementaion for calculating speed of vehicles can be found <a href="https://github.com/roadcross-assistant/Project/blob/master/get_speeds_from_videos.ipynb" target="_blank">
-                                                <u>here</u>.</a><br><br>
-                                            </span>
-                                        </div>
-                                        <br>
-                                        <div class=" text-primary font-weight-bold text-xls mb-1 h5"><span>Classification Model</span></div>
-                                        <div class="text-center"><img src="assets/img/approach_1.3.png" width="100%"></div><br>
-                                        <div class="text-dark h6 mb-0"><span>
-                                            <b> Preprocessing tasks: </b> <br><br>
-                                            <ol>
-                                                <li>Train-test split (using 80 videos for training, 24 for testing)</li>
-                                                <li>Generating features and labels dataframe including speed of vehicles in every region </li>
-                                                <li>Feature Scaling using MinMax Scaler</li>
-                                            </ol>  
-                                            <b>Model Training:</b><br><br>
-                                            <ul>
-                                                <li>We used SVM(Support Vector Machine) to train a classification model to predict
-                                                    if a frame is safe/unsafe.
-                                                </li>
-                                                <li>Training accuracy : <b> 85.91% </b>, Testing accuracy: <b> 83.34% </b></li>
-                                                <li>Mean average precision on test data: <b>0.74</b></li>
-                                                <li>Python implementaion for the same can be found <a href="https://github.com/roadcross-assistant/Project/blob/master/Approach_1.3_individual_frames.ipynb" target="_blank"> <u>here</u>.</a></li>
-                                            </ul>
-                                        </span>
-                                        </div><br>
-                                        <div class=" text-primary font-weight-bold text-xls mb-1 h5"><span>Sample Prediction Outputs</span></div>
-                                        <br>
-                                        <div class="row">
-                                            <div class="images-row col-lg-4 col-sm-12">
-                                                <img src="assets/img/approach_1.3_frames/tp1.jpg" width="100%">
-                                                <figcaption>True Positive</figcaption><br>
-                                            </div>
-                                            <div class="images-row col-lg-4 col-sm-12">
-                                                <img src="assets/img/approach_1.3_frames/tp2.jpg" width="100%">
-                                                <figcaption>True Positive</figcaption><br>
-                                            </div>
-                                            <div class="images-row col-lg-4 col-sm-12">
-                                                <img src="assets/img/approach_1.3_frames/tn1.jpg" width="100%">
-                                                <figcaption>True Negative</figcaption><br>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="images-row col-lg-4 col-sm-12">
-                                                <img src="assets/img/approach_1.3_frames/tn2.jpg" width="100%">
-                                                <figcaption>True Negative</figcaption><br>
-                                            </div>
-                                            <div class="images-row col-lg-4 col-sm-12">
-                                                <img src="assets/img/approach_1.2_frames/fp1.jpg" width="100%">
-                                                <figcaption>False Positive</figcaption><br>
-                                            </div>
-                                            <div class="images-row col-lg-4 col-sm-12">
-                                                <img src="assets/img/approach_1.2_frames/fn1.jpg" width="100%">
-                                                <figcaption>False Negative</figcaption><br>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col text-sm-left text-center mb-5">
-                    <a href="approach-2.html"class="btn btn-primary shadow btn-lg">
-                        <i class="fas fa-arrow-left text-light" aria-hidden="true"></i>
-                        View Approach 2
-                    </a>
-                </div>
+      <nav
+        class="
+          navbar1
+          navbar-dark
+          align-items-start
+          sidebar sidebar-dark
+          accordion
+          bg-gradient-primary
+          p-0
+        "
+      >
+        <div class="container-fluid d-flex flex-column p-0">
+          <button
+            class="btn btn-link d-md-none rounded-circle mt-3 text-light"
+            id="sidebarToggleTop"
+            type="button"
+          >
+            <i class="fas fa-arrow-left"></i>
+          </button>
+          <br class="d-none d-sm-block" />
+          <br class="d-none d-sm-block" />
+          <br class="d-sm-none" />
+          <ul class="nav navbar-nav text-light" id="accordionSidebar">
+            <li class="nav-item" role="presentation">
+              <a class="nav-link" href="index.html"
+                ><i class="fas fa-home"></i><span>Home</span></a
+              >
+            </li>
+            <li class="nav-item" role="presentation">
+              <a class="nav-link" href="dataset.html"
+                ><i class="fas fa-database"></i><span>Dataset</span></a
+              >
+            </li>
+            <li class="nav-item dropdown approach-dropdown">
+              <a
+                class="nav-link active dropdown-toggle"
+                id="navbarDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+                href="model_training.html"
+                ><i class="fas fa-project-diagram"></i
+                ><span
+                  >Model <br class="d-sm-none" />
+                  Training</span
+                ></a
+              >
+              <div
+                class="dropdown-menu approach-menu shadow"
+                aria-labelledby="navbarDropdown"
+              >
+                <a class="dropdown-item approach-item" href="overview.html"
+                  >Overview</a
+                >
+                <a class="dropdown-item approach-item" href="approach-1.html"
+                  >Approach 1</a
+                >
+                <a class="dropdown-item approach-item" href="approach-2.html"
+                  >Approach 2</a
+                >
+                <a class="dropdown-item approach-item" href="approach-3.html"
+                  >Approach 3</a
+                >
+                <!-- <a class="dropdown-item approach-item" href="approach-3.html">Approach 3</a> -->
+              </div>
+            </li>
+            <li class="nav-item" role="presentation">
+              <a class="nav-link" href="deployment.html"
+                ><i class="fas fa-blind"></i><span>Deployment</span></a
+              >
+            </li>
+            <li class="nav-item" role="presentation">
+              <a class="nav-link" href="about.html"
+                ><i class="fas fa-user-friends"></i><span>About Us</span></a
+              >
+            </li>
+          </ul>
+          <div class="text-center d-none d-md-inline">
+            <button
+              class="btn rounded-circle border-0"
+              id="sidebarToggle"
+              type="button"
+            ></button>
+          </div>
         </div>
-        <footer class="bg-white sticky-footer shadow">
-            <div class="container my-auto">
-                <div class="text-center my-auto copyright">
-                    <span>Copyright © Siddhi Brahmbhatt | Yagnesh Patil</span>
-                </div>
+      </nav>
+
+      <div class="d-flex flex-column" id="content-wrapper">
+        <div id="content">
+          <nav
+            class="
+              navbar navbar-light navbar-expand
+              bg-white
+              shadow
+              mb-4
+              topbar
+              static-top
+            "
+          >
+            <div class="container-fluid">
+              <button
+                class="btn btn-link d-md-none rounded-circle mr-3"
+                id="sidebarToggleTop"
+                type="button"
+              >
+                <i class="fas fa-bars"></i>
+              </button>
+              <p id="project-title">Road Crossing Assistant</p>
             </div>
-        </footer> 
+          </nav>
+          <div class="container-fluid">
+            <div class="work-in-progress-div text-center">
+              <h1 style="color: #5a5c69; font-size: 2em; font-weight: 500">
+                Approach 3: Deep Learning based approach
+              </h1>
+              <br />
+            </div>
+            <div class="row">
+              <div class="col-md-12 col-xl-12 mb-4">
+                <div class="card shadow mb-4">
+                  <div class="card-body">
+                    Deep Learning approach has proven its significance many
+                    times that it can perform very well without disclosing any
+                    complexities and requiring any special kind of internmediate
+                    training phases. <br />
+                    So, we went further with implementing DL based approaches.
+                    For that, we have divided out dataset in such manner:
+
+                    <ol>
+                      <li>Training Dataset - 74 videos</li>
+                      <li>validation Dataset - 15 videos</li>
+                      <li>Testing Dataset - 15 videos</li>
+                    </ol>
+
+                    <div class="row align-items-center no-gutters">
+                      <div class="col mr-1">
+                        <div class="approach-heading-div">
+                          <h4
+                            class="
+                              text-capitalize text-primary
+                              font-weight-bold
+                              text-xls
+                              my-2
+                            "
+                          >
+                            <a id="approach1.1">APPROACH 3.1 </a>
+                          </h4>
+                        </div>
+                        <hr style="height: 1px; background-color: #efefef" />
+                        Approach 3.1 consists of
+                        <strong>MobileNetv2 model</strong> - which is used
+                        widely to run on small and low configuration based
+                        devices such as mobile and in this project - on Nvidia
+                        Jetson Nano. <br /><br />
+                        <div class="text-center">
+                          <img
+                            src="assets/img/custom_mobilenet.png"
+                            class="img-fluid"
+                          />
+                        </div>
+                        <br />
+                        <div class="h6 mb-0">
+                          <span>
+                            So in this pre-trained model, to specify the
+                            <strong>
+                              custom input image shape [270,480]
+                            </strong>
+                            for this project, We have added new additional
+                            layers to build a custom MobileNetV2 architecture
+                            and train it on our training video dataset, in
+                            addition to applying testing and validation sets in
+                            model architecture training process. The python
+                            script for this architecture is available
+                            <a
+                              href="#link_to_custom_mobilenet_model"
+                              target="_blank"
+                            >
+                              <u>here</u>.</a
+                            >
+                          </span>
+                        </div>
+                        <br />
+                        <div
+                          class="text-primary font-weight-bold text-xls mb-1 h5"
+                        >
+                          <span>Model performance</span>
+                        </div>
+                        accuracy, speed and overfitting issues
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-12 col-xl-12 mb-4">
+                <div class="card shadow mb-4">
+                  <div class="card-body">
+                    <div class="row align-items-center no-gutters">
+                      <div class="col mr-1">
+                        <div class="approach-heading-div">
+                          <h4
+                            class="
+                              text-capitalize text-primary
+                              font-weight-bold
+                              text-xls
+                              my-2
+                            "
+                          >
+                            <a id="approach1.2">APPROACH 3.2 </a>
+                          </h4>
+                        </div>
+                        <hr style="height: 1px; background-color: #efefef" />
+                        Due to issues we were facing with custom MobileNetv2
+                        model architecture and such standard architectures are
+                        built and used for general purpose applications, we
+                        moved to next DL approach that is to
+                        <strong> create </strong>our
+                        <strong>own custom model</strong> from scratch for
+                        application-specific purpose in the project.
+                        <br /><br />
+                        <div>
+                          <img
+                            src="assets/img/custom_model_big_kernel.png"
+                            class="img-fluid"
+                          />
+                        </div>
+                        <br />
+                        <div class="text-dark h6 mb-0">
+                          <span>
+                            In this approach, we are able to overcome the issues
+                            of overfitting on the training dataset and achieve
+                            better accuracy metrics for the same. The python
+                            script for this architecture is available
+                            <a
+                              href="#link_to_custom_model_with_big_kernel_size"
+                              target="_blank"
+                            >
+                              <u>here</u>.</a
+                            >
+                            <br /><br />
+                          </span>
+                        </div>
+                        <br />
+                        <div
+                          class="text-primary font-weight-bold text-xls mb-1 h5"
+                        >
+                          <span>Model performance</span>
+                        </div>
+                        accuracy, speed and performance issues
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-12 col-xl-12 mb-4">
+                <div class="card shadow mb-4">
+                  <div class="card-body">
+                    <div class="row align-items-center no-gutters">
+                      <div class="col mr-1">
+                        <div class="approach-heading-div">
+                          <h4
+                            class="
+                              text-capitalize text-primary
+                              font-weight-bold
+                              text-xls
+                              my-2
+                            "
+                          >
+                            <a id="approach1.3">APPROACH 3.3 </a>
+                          </h4>
+                        </div>
+                        <hr style="height: 1px; background-color: #efefef" />
+                        Our model with dilated convolutions
+                        <a
+                          href="https://github.com/roadcross-assistant/Project/blob/master/frame-wise-annotations.ipynb"
+                          target="_blank"
+                        >
+                          <u>here</u>.</a
+                        >
+                        <br /><br />
+                        <div
+                          class="text-primary font-weight-bold text-xls mb-1 h5"
+                        >
+                          <span>Feature Extraction</span>
+                        </div>
+                        <div>
+                          <img
+                            src="assets/img/features_1.3_1.png"
+                            class="img-fluid"
+                          />
+                        </div>
+                        <div>
+                          <img
+                            src="assets/img/features_1.3_2.png"
+                            class="img-fluid"
+                          />
+                        </div>
+
+                        <div class="text-dark h6 mb-0">
+                          <span>
+                            <br />
+                            The feature extraction logic is same as that of
+                            Approach 1.2, with just one feature addition as per
+                            the <b> speed of vehicles</b>. It is very intuitive
+                            that speed of vehicles is a very important aspect to
+                            be considered while crossing roads. So, we have
+                            added 6 new features in this approach, we have
+                            considered maximum speed (of any vehicle) in each
+                            region as a feature. The Python implementaion for
+                            calculating speed of vehicles can be found
+                            <a
+                              href="https://github.com/roadcross-assistant/Project/blob/master/get_speeds_from_videos.ipynb"
+                              target="_blank"
+                            >
+                              <u>here</u>.</a
+                            ><br /><br />
+                          </span>
+                        </div>
+                        <br />
+                        <div
+                          class="text-primary font-weight-bold text-xls mb-1 h5"
+                        >
+                          <span>Classification Model</span>
+                        </div>
+                        <div class="text-center">
+                          <img src="assets/img/approach_1.3.png" width="100%" />
+                        </div>
+                        <br />
+                        <div class="text-dark h6 mb-0">
+                          <span>
+                            <b> Preprocessing tasks: </b> <br /><br />
+                            <ol>
+                              <li>
+                                Train-test split (using 80 videos for training,
+                                24 for testing)
+                              </li>
+                              <li>
+                                Generating features and labels dataframe
+                                including speed of vehicles in every region
+                              </li>
+                              <li>Feature Scaling using MinMax Scaler</li>
+                            </ol>
+                            <b>Model Training:</b><br /><br />
+                            <ul>
+                              <li>
+                                We used SVM(Support Vector Machine) to train a
+                                classification model to predict if a frame is
+                                safe/unsafe.
+                              </li>
+                              <li>
+                                Training accuracy : <b> 85.91% </b>, Testing
+                                accuracy: <b> 83.34% </b>
+                              </li>
+                              <li>
+                                Mean average precision on test data: <b>0.74</b>
+                              </li>
+                              <li>
+                                Python implementaion for the same can be found
+                                <a
+                                  href="https://github.com/roadcross-assistant/Project/blob/master/Approach_1.3_individual_frames.ipynb"
+                                  target="_blank"
+                                >
+                                  <u>here</u>.</a
+                                >
+                              </li>
+                            </ul>
+                          </span>
+                        </div>
+                        <br />
+                        <div
+                          class="text-primary font-weight-bold text-xls mb-1 h5"
+                        >
+                          <span>Sample Prediction Outputs</span>
+                        </div>
+                        <br />
+                        <div class="row">
+                          <div class="images-row col-lg-4 col-sm-12">
+                            <img
+                              src="assets/img/approach_1.3_frames/tp1.jpg"
+                              width="100%"
+                            />
+                            <figcaption>True Positive</figcaption>
+                            <br />
+                          </div>
+                          <div class="images-row col-lg-4 col-sm-12">
+                            <img
+                              src="assets/img/approach_1.3_frames/tp2.jpg"
+                              width="100%"
+                            />
+                            <figcaption>True Positive</figcaption>
+                            <br />
+                          </div>
+                          <div class="images-row col-lg-4 col-sm-12">
+                            <img
+                              src="assets/img/approach_1.3_frames/tn1.jpg"
+                              width="100%"
+                            />
+                            <figcaption>True Negative</figcaption>
+                            <br />
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="images-row col-lg-4 col-sm-12">
+                            <img
+                              src="assets/img/approach_1.3_frames/tn2.jpg"
+                              width="100%"
+                            />
+                            <figcaption>True Negative</figcaption>
+                            <br />
+                          </div>
+                          <div class="images-row col-lg-4 col-sm-12">
+                            <img
+                              src="assets/img/approach_1.2_frames/fp1.jpg"
+                              width="100%"
+                            />
+                            <figcaption>False Positive</figcaption>
+                            <br />
+                          </div>
+                          <div class="images-row col-lg-4 col-sm-12">
+                            <img
+                              src="assets/img/approach_1.2_frames/fn1.jpg"
+                              width="100%"
+                            />
+                            <figcaption>False Negative</figcaption>
+                            <br />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col text-sm-left text-center mb-5">
+              <a href="approach-2.html" class="btn btn-primary shadow btn-lg">
+                <i class="fas fa-arrow-left text-light" aria-hidden="true"></i>
+                View Approach 2
+              </a>
+            </div>
+          </div>
+          <footer class="bg-white sticky-footer shadow">
+            <div class="container my-auto">
+              <div class="text-center my-auto copyright">
+                <span>Copyright © Siddhi Brahmbhatt | Yagnesh Patil</span>
+              </div>
+            </div>
+          </footer>
+        </div>
+      </div>
     </div>
+    <div>
+      <a class="border rounded-circle d-inline scroll-to-top" href="#page-top"
+        ><i class="fas fa-arrow-up"></i
+      ></a>
     </div>
-    </div>
-    <div><a class="border rounded-circle d-inline scroll-to-top" href="#page-top"><i class="fas fa-arrow-up"></i></a></div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script>
@@ -351,12 +491,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>
     <script src="assets/js/theme.js"></script>
     <script>
-        $( document ).ready(function() {
-            if ($(window).width() < 768) {
-                $(".sidebar").toggleClass("toggled");
-            }
-        });
+      $(document).ready(function () {
+        if ($(window).width() < 768) {
+          $(".sidebar").toggleClass("toggled");
+        }
+      });
     </script>
-</body>
-
+  </body>
 </html>

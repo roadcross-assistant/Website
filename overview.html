@@ -30,9 +30,9 @@
                         <a class="nav-link active dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="model_training.html"><i class="fas fa-project-diagram"></i><span>Model <br class="d-sm-none"> Training</span></a>
                         <div class="dropdown-menu approach-menu shadow" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item approach-item" href="overview.html">Overview</a>
-                            <a class="dropdown-item approach-item" href="approach-1.html">Approach 1</a>
-                          <a class="dropdown-item approach-item" href="approach-2.html">Approach 2</a>
-                          <a class="dropdown-item approach-item" href="approach-3.html">Approach 3</a>
+                            <a class="dropdown-item approach-item" href="approach-1.html">Single frame SVM</a>
+                          <a class="dropdown-item approach-item" href="approach-2.html">Multi frame SVM</a>
+                          <a class="dropdown-item approach-item" href="approach-3.html">Single frame CNN</a>
                           <!-- <a class="dropdown-item approach-item" href="approach-3.html">Approach 3</a> -->
                         </div>
                       </li>
@@ -54,22 +54,23 @@
                     <h1 style="color: #5a5c69; font-size: 2.5em; font-weight: 500;">Model Training - Overview </h1> <br>
                     For developing a prediction model to predict safe duration for crossing road from a given video, 
                     we have performed many training experiments as shown below. Since road crossing for visually impaired 
-                    people is an application which requires high precision in order to be deployed in real-time, we have 
-                    used <i><b>mean average precision (mAP)</b></i> as the evaluation metric for the trained models.  
+                    people is an application which requires high precision (along with a decent enough recall) in order 
+                    to be deployed in real-time, we have used <i><b>precision and recall</b></i> as the evaluation metric for the 
+                    trained models.  
                 </div>
                 
                 <section class="pricing-table">
                     <div class="container">
                         <div class="pricing-area text-center">
                             <h4 class="text-capitalize text-primary font-weight-bold text-xls mb-1">
-                                <span>Approach 1: Individual frames based approach<br><br></span>
+                                <span>Single frame SVM<br><br></span>
                             </h4>
                             <div class="row">
                                 
                                 <div class="col-sm-4 plan price red wow fadeInDown">
                                     <ul class="list-group">
                                         <li class="list-group-item heading">
-                                            <h1>Approach 1.1</h1><span class="price">mAP : 0.58</span>
+                                            <h1>Approach 1.1</h1><span class="price">precision : 0.50 , recall : 0.70</span>
                                         </li>
                                         <li class="list-group-item"><span><br><div class="list-content">It is our simplest 
                                             approach where we extracted  simple per-frame features capturing number, location and size
@@ -81,7 +82,7 @@
                                 <div class="col-sm-4 plan price yellow wow fadeInDown">
                                     <ul class="list-group">
                                         <li class="list-group-item heading">
-                                            <h1>Approach 1.2</h1><span class="price">mAP : 0.64</span>
+                                            <h1>Approach 1.2</h1><span class="price">precision : 0.54 , recall : 0.74</span>
                                         </li>
                                         <li class="list-group-item"><span><br><div class="list-content">It is an advancement 
                                             over Approach 1.1 where we have improved our feature extraction logic by ignoring 
@@ -93,7 +94,7 @@
                                 <div class="col-sm-4 plan price green wow fadeInDown">
                                     <ul class="list-group">
                                         <li class="list-group-item heading">
-                                            <h1>Approach 1.3</h1><span class="price">mAP : 0.74</span>
+                                            <h1>Approach 1.3</h1><span class="price">precision : 0.68 , recall : 0.87</span>
                                         </li>
                                         <li class="list-group-item"><span><br><div class="list-content">It is an advancement 
                                             over Approach 1.2 where we have improved our feature extraction logic by considereing 
@@ -105,7 +106,7 @@
                             </div>
 
                             <h4 class="text-capitalize text-primary font-weight-bold text-xls mb-1">
-                                <span>Approach 2: Multiple frames based approach<br><br></span>
+                                <span>Multi frame SVM<br><br></span>
                             </h4>
 
                             <div class="row">
@@ -113,7 +114,7 @@
                                 <div class="col-sm-4 plan price red wow fadeInDown">
                                     <ul class="list-group">
                                         <li class="list-group-item heading">
-                                            <h1>Approach 2.1</h1><span class="price">mAP : 0.80</span>
+                                            <h1>Approach 2.1</h1><span class="price">precision : 0.74 , recall : 0.88</span>
                                         </li>
                                         <li class="list-group-item"><span><br><div class="list-content">As it is obvious that even we as
                                              humans do not decide whether it is safe to cross a road by just having one glance at the road, 
@@ -126,7 +127,7 @@
                                 <div class="col-sm-4 plan price yellow wow fadeInDown">
                                     <ul class="list-group">
                                         <li class="list-group-item heading">
-                                            <h1>Approach 2.2</h1><span class="price">mAP : 0.80</span>
+                                            <h1>Approach 2.2</h1><span class="price">precision : 0.79 , recall : 0.83</span>
                                         </li>
                                         <li class="list-group-item"><span><br><div class="list-content">Approach 2.2 is similar to 
                                             Approach 2.1, in which we have used multi-frame features in a sliding window based manner. 
@@ -139,7 +140,7 @@
                             </div>
 
                             <h4 class="text-capitalize text-primary font-weight-bold text-xls mb-1">
-                                <span>Approach 3: Deep learning based approach<br><br></span>
+                                <span>Single frame CNN<br><br></span>
                             </h4>
 
                             <div class="row">

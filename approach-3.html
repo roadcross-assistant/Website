@@ -144,10 +144,11 @@
               <div class="col-md-12 col-xl-12 mb-4">
                 <div class="card shadow mb-4">
                   <div class="card-body">
-                    Deep Learning approach has proven its significance many
-                    times that it can perform very well without disclosing any
-                    complexities and requiring any special kind of internmediate
-                    training phases. <br />
+                    Deep Learning approach has proven its significance from past
+                    2 decades that it can perform very well without disclosing
+                    any complexities and not requiring any special kind of
+                    internmediate training phases which need any human
+                    interations. <br />
                     So, we went further with implementing DL based approaches.
                     For that, we have divided out dataset in such manner:
 
@@ -176,7 +177,9 @@
                         <strong>MobileNetv2 model</strong> - which is used
                         widely to run on small and low configuration based
                         devices such as mobile and in this project - on Nvidia
-                        Jetson Nano. <br /><br />
+                        Jetson Nano (More about it on
+                        <a href="deployment.html"> Deployment page). </a>
+                        <br /><br />
                         <div class="text-center">
                           <img
                             src="assets/img/custom_mobilenet.png"
@@ -273,7 +276,7 @@
                         >
                           <span>Model performance</span>
                         </div>
-                        accuracy, speed and performance issues
+                        accuracy, speed and performance issues on jetson nano
                       </div>
                     </div>
                   </div>
@@ -300,13 +303,26 @@
                           </h4>
                         </div>
                         <hr style="height: 1px; background-color: #efefef" />
-                        Our model with dilated convolutions
+                        Our model with dilated convolutions <br />
+                        We needed a much faster and light-weight model so that
+                        it can run on small computing devices like Jetson Nano
+                        on a realtime-basis on live video stream. <br />
+                        In this approach, we have applied a concept known as
+                        <strong>Dilated Convolution</strong> in our custom model
+                        from approach 3.2. You can get more idea about this from
+                        the reference about dilated convolutions on
                         <a
-                          href="https://github.com/roadcross-assistant/Project/blob/master/frame-wise-annotations.ipynb"
+                          href="https://erogol.com/dilated-convolution/"
                           target="_blank"
                         >
-                          <u>here</u>.</a
-                        >
+                          erogol.com.
+                        </a>
+                        <br />
+                        By using dilated convolution in the model architecture
+                        for our advantange, we are able to achieve higher
+                        throughput (number of predictions of video frames per
+                        second) without affecting the accuracy of prediction
+                        model.
                         <br /><br />
                         <div
                           class="text-primary font-weight-bold text-xls mb-1 h5"

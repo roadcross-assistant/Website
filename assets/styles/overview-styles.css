@@ -136,3 +136,29 @@ p {
 .heading {
   text-align: center;
 }
+
+.approach-card {
+  min-height: 90%;
+  border: 1px solid #cfcfcf;
+  border-radius: 0;
+  background-color: transparent;
+  margin-bottom: 3em;
+}
+
+.read-more-btn {
+  width: 80%;
+}
+
+.middle-card-heading,
+.middle-read-more {
+  background-color: #f39c12;
+}
+
+.right-card-heading,
+.right-read-more {
+  background-color: #27ae60;
+}
+
+.accuracy-p {
+  font-weight: 700;
+}

@@ -252,7 +252,7 @@
                     </div>
                   </div>
                 </div>
-
+                <br />
                 <h4
                   class="
                     text-capitalize text-primary
@@ -335,71 +335,92 @@
                 </h4>
 
                 <div class="row">
-                  <div class="col-sm-4 plan price red wow fadeInDown">
-                    <ul class="list-group">
-                      <li class="list-group-item heading">
-                        <h1>Approach 3.1</h1>
-                        <span class="price">mAP : 0.58</span>
-                      </li>
-                      <li class="list-group-item">
-                        <span
-                          ><br />
-                          <div class="list-content">
-                            MobileNet custom model<br /><br /><br />
-                          </div>
-                          <br /><br
-                        /></span>
-                      </li>
-                      <li class="list-group-item plan-action">
-                        <a class="btn" href="approach-1.html#approach1.1"
+                  <div class="col-sm-4">
+                    <div class="card approach-card">
+                      <div class="approach-heading bg-danger text-light py-3">
+                        <h1 class="approach-title">Approach 3.1</h1>
+                        <p class="accuracy-p">
+                          precision : 0.74 , recall : 0.88 [need to change]
+                        </p>
+                      </div>
+                      <div class="approach-description py-3 px-2 text-left">
+                        Approach 3.1 consists of MobileNetv2 model with
+                        additional custom layers - which is used widely to run
+                        on small and low configuration based devices such as
+                        mobile and in this project - on Nvidia Jetson Nano.
+                      </div>
+                      <br />
+                      <div class="read-more-div text-center">
+                        <a
+                          class="btn btn-danger read-more-btn"
+                          href="approach-3.html#approach3.1"
                           >Read more</a
                         >
-                      </li>
-                    </ul>
+                      </div>
+                    </div>
                   </div>
-                  <div class="col-sm-4 plan price yellow wow fadeInDown">
-                    <ul class="list-group">
-                      <li class="list-group-item heading">
-                        <h1>Approach 3.2</h1>
-                        <span class="price">mAP : 0.64</span>
-                      </li>
-                      <li class="list-group-item">
-                        <span
-                          ><br />
-                          <div class="list-content">
-                            our model with large kernel size<br /><br />
-                          </div>
-                          <br /><br
-                        /></span>
-                      </li>
-                      <li class="list-group-item plan-action">
-                        <a class="btn" href="approach-1.html#approach1.2"
+                  <div class="col-sm-4">
+                    <div class="card approach-card">
+                      <div
+                        class="
+                          approach-heading
+                          middle-card-heading
+                          text-light
+                          py-3
+                        "
+                      >
+                        <h1 class="approach-title">Approach 3.2</h1>
+                        <p class="accuracy-p">
+                          precision : 0.54 , recall : 0.74 [need to change]
+                        </p>
+                      </div>
+                      <div class="approach-description py-3 px-2 text-left">
+                        Approach 3.2 consists of custom-light weight model
+                        architecture built and trained from the scratch to make
+                        it useful for this project's application-specific
+                        purpose rather than using standard general-purpose
+                        model.
+                      </div>
+                      <br />
+                      <div class="read-more-div text-center">
+                        <a
+                          class="btn btn-warning read-more-btn middle-read-more"
+                          href="approach-3.html#approach3.2"
                           >Read more</a
                         >
-                      </li>
-                    </ul>
+                      </div>
+                    </div>
                   </div>
-                  <div class="col-sm-4 plan price green wow fadeInDown">
-                    <ul class="list-group">
-                      <li class="list-group-item heading">
-                        <h1>Approach 3.3</h1>
-                        <span class="price">mAP : 0.74</span>
-                      </li>
-                      <li class="list-group-item">
-                        <span
-                          ><br />
-                          <div class="list-content">
-                            our model with dilated convolutions
-                          </div>
-                          <br /><br
-                        /></span>
-                      </li>
-                      <li class="list-group-item plan-action">
-                        <a class="btn" href="approach-1.html#approach1.3"
+                  <div class="col-sm-4">
+                    <div class="card approach-card">
+                      <div
+                        class="
+                          approach-heading
+                          right-card-heading
+                          text-light
+                          py-3
+                        "
+                      >
+                        <h1 class="approach-title">Approach 1.3</h1>
+                        <p class="accuracy-p">
+                          precision : 0.68 , recall : 0.87 [need to change]
+                        </p>
+                      </div>
+                      <div class="approach-description py-3 px-2 text-left">
+                        Approach 3.3 is continuation of Approach 3.2 custom
+                        model, that is developed to work as faster, efficient
+                        and light-weight model architecture to run on small
+                        computing devices with the help of dilated convolutions.
+                      </div>
+                      <br />
+                      <div class="read-more-div text-center">
+                        <a
+                          class="btn btn-success read-more-btn right-read-more"
+                          href="approach-1.html#approach1.3"
                           >Read more</a
                         >
-                      </li>
-                    </ul>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>

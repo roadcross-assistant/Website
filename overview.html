@@ -306,10 +306,9 @@
                         </p>
                       </div>
                       <div class="approach-description py-3 px-2 text-left">
-                        Approach 2.2 is similar to Approach 2.1, in which we
-                        have used multi-frame features in a sliding window based
-                        manner. Its feature extraction logic is a bit different
-                        as compared to Approach 2.1. <br /><br />
+                        It is similar to Approach 2.1, in which we have used multi-frame features in a sliding window based manner. 
+                        Its feature extraction logic is a bit optimized as compared to that of Approach 2.1.
+                        <br /><br />
                       </div>
                       <br />
                       <div class="read-more-div text-center">
@@ -340,16 +339,15 @@
                       <div class="approach-heading bg-danger text-light py-3">
                         <h1 class="approach-title">Approach 3.1</h1>
                         <p class="accuracy-p">
-                          precision : 0.74 , recall : 0.88 [need to change]
+                          precision : 0.90 , recall : 0.54
                         </p>
                       </div>
                       <div class="approach-description py-3 px-2 text-left">
-                        Approach 3.1 consists of MobileNetv2 model with
-                        additional custom layers - which is used widely to run
-                        on small and low configuration based devices such as
-                        mobile and in this project - on Nvidia Jetson Nano.
+                        In Approach 3.1, we used the MobileNetV2 architecture with additional dense layers at the top. We used 
+                        the MobileNetV2 because it is a lightweight architecture particularly useful for mobile and embedded vision 
+                        applications.
                       </div>
-                      <br />
+                      <br /> <br><br>
                       <div class="read-more-div text-center">
                         <a
                           class="btn btn-danger read-more-btn"
@@ -371,17 +369,15 @@
                       >
                         <h1 class="approach-title">Approach 3.2</h1>
                         <p class="accuracy-p">
-                          precision : 0.54 , recall : 0.74 [need to change]
+                          precision : 0.90 , recall : 0.73
                         </p>
                       </div>
                       <div class="approach-description py-3 px-2 text-left">
-                        Approach 3.2 consists of custom-light weight model
-                        architecture built and trained from the scratch to make
-                        it useful for this project's application-specific
-                        purpose rather than using standard general-purpose
-                        model.
+                        As Approach 3.1 did not give a satisfactory performance on test data, in Approach 3.2 we have developed our 
+                        own CNN architecture from scratch. However, since it's convolutional layers consisted of kernels of size greater 
+                        than 3, its inference speed was very low even after optimization to a TensorRT graph.
                       </div>
-                      <br />
+                      
                       <div class="read-more-div text-center">
                         <a
                           class="btn btn-warning read-more-btn middle-read-more"
@@ -401,18 +397,17 @@
                           py-3
                         "
                       >
-                        <h1 class="approach-title">Approach 1.3</h1>
+                        <h1 class="approach-title">Approach 3.3</h1>
                         <p class="accuracy-p">
-                          precision : 0.68 , recall : 0.87 [need to change]
+                          precision : 0.90 , recall : 0.77
                         </p>
                       </div>
                       <div class="approach-description py-3 px-2 text-left">
-                        Approach 3.3 is continuation of Approach 3.2 custom
-                        model, that is developed to work as faster, efficient
-                        and light-weight model architecture to run on small
-                        computing devices with the help of dilated convolutions.
+                        It is an advancement over approach 3.2, in which we have replaced the convolutional layers with larger kernal 
+                        size with dilated convolutional layers. This resulted in a higher inference speed after optimization to TensorRT 
+                        graph
                       </div>
-                      <br />
+                      <br /><br><br>
                       <div class="read-more-div text-center">
                         <a
                           class="btn btn-success read-more-btn right-read-more"

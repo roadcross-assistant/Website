@@ -6,7 +6,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
     />
-    <title>Approach 3 • RCA</title>
+    <title>Approach 3 - Single frame CNN • RCA</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
     <link
       rel="stylesheet"
@@ -22,13 +22,29 @@
 
   <body id="page-top">
     <div id="wrapper" class="text-dark">
-        <nav class="navbar1 navbar-dark align-items-start sidebar sidebar-dark accordion bg-gradient-primary p-0">
-            <div class="container-fluid d-flex flex-column p-0">
-                <button class="btn btn-link d-md-none rounded-circle mt-3 text-light" id="sidebarToggleTop" type="button"><i class="fas fa-arrow-left"></i></button>
-                <br class="d-none d-sm-block">
-                <br class="d-none d-sm-block">
-                <br class="d-sm-none">
-                <!-- <a class="navbar-brand justify-content-center align-items-center text-center sidebar-brand m-0 p-2" href="index.html">
+      <nav
+        class="
+          navbar1
+          navbar-dark
+          align-items-start
+          sidebar sidebar-dark
+          accordion
+          bg-gradient-primary
+          p-0
+        "
+      >
+        <div class="container-fluid d-flex flex-column p-0">
+          <button
+            class="btn btn-link d-md-none rounded-circle mt-3 text-light"
+            id="sidebarToggleTop"
+            type="button"
+          >
+            <i class="fas fa-arrow-left"></i>
+          </button>
+          <br class="d-none d-sm-block" />
+          <br class="d-none d-sm-block" />
+          <br class="d-sm-none" />
+          <!-- <a class="navbar-brand justify-content-center align-items-center text-center sidebar-brand m-0 p-2" href="index.html">
                     <div class="sidebar-brand-icon">
                         <img src="assets/img/roadcrossing-logo.png" class="bg-white m-1 p-1 rounded-circle" height="45px" alt="">
                     </div>
@@ -36,27 +52,72 @@
                         CA
                     </div>
                 </a> -->
-                <!-- <hr class="sidebar-divider my-0"> -->
-                <ul class="nav navbar-nav text-light " id="accordionSidebar">
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="index.html"><i class="fas fa-home"></i><span>Home</span></a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="dataset.html"><i class="fas fa-database"></i><span>Dataset</span></a></li>
-                    <li class="nav-item dropdown approach-dropdown">
-                        <a class="nav-link active dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="model_training.html"><i class="fas fa-project-diagram"></i><span>Model <br class="d-sm-none"> Training</span></a>
-                        <div class="dropdown-menu approach-menu shadow" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item approach-item" href="overview.html">Overview</a>
-                            <a class="dropdown-item approach-item" href="approach-1.html">Single frame SVM</a>
-                          <a class="dropdown-item approach-item" href="approach-2.html">Multi frame SVM</a>
-                          <a class="dropdown-item approach-item" href="approach-3.html">Single frame CNN</a>
-                          <!-- <a class="dropdown-item approach-item" href="approach-3.html">Approach 3</a> -->
-                        </div>
-                      </li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="deployment.html"><i class="fas fa-blind"></i><span>Deployment</span></a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="about.html"><i class="fas fa-user-friends"></i><span>About Us</span></a></li>
-                </ul>
-                <div class="text-center d-none d-md-inline"><button class="btn rounded-circle border-0" id="sidebarToggle" type="button"></button></div>
-            </div>
-        </nav>
-
+          <!-- <hr class="sidebar-divider my-0"> -->
+          <ul class="nav navbar-nav text-light" id="accordionSidebar">
+            <li class="nav-item" role="presentation">
+              <a class="nav-link" href="index.html"
+                ><i class="fas fa-home"></i><span>Home</span></a
+              >
+            </li>
+            <li class="nav-item" role="presentation">
+              <a class="nav-link" href="dataset.html"
+                ><i class="fas fa-database"></i><span>Dataset</span></a
+              >
+            </li>
+            <li class="nav-item dropdown approach-dropdown">
+              <a
+                class="nav-link active dropdown-toggle"
+                id="navbarDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+                href="model_training.html"
+                ><i class="fas fa-project-diagram"></i
+                ><span
+                  >Model <br class="d-sm-none" />
+                  Training</span
+                ></a
+              >
+              <div
+                class="dropdown-menu approach-menu shadow"
+                aria-labelledby="navbarDropdown"
+              >
+                <a class="dropdown-item approach-item" href="overview.html"
+                  >Overview</a
+                >
+                <a class="dropdown-item approach-item" href="approach-1.html"
+                  >Single frame SVM</a
+                >
+                <a class="dropdown-item approach-item" href="approach-2.html"
+                  >Multi frame SVM</a
+                >
+                <a class="dropdown-item approach-item" href="approach-3.html"
+                  >Single frame CNN</a
+                >
+                <!-- <a class="dropdown-item approach-item" href="approach-3.html">Approach 3</a> -->
+              </div>
+            </li>
+            <li class="nav-item" role="presentation">
+              <a class="nav-link" href="deployment.html"
+                ><i class="fas fa-blind"></i><span>Deployment</span></a
+              >
+            </li>
+            <li class="nav-item" role="presentation">
+              <a class="nav-link" href="about.html"
+                ><i class="fas fa-user-friends"></i><span>About Us</span></a
+              >
+            </li>
+          </ul>
+          <div class="text-center d-none d-md-inline">
+            <button
+              class="btn rounded-circle border-0"
+              id="sidebarToggle"
+              type="button"
+            ></button>
+          </div>
+        </div>
+      </nav>
 
       <div class="d-flex flex-column" id="content-wrapper">
         <div id="content">
@@ -117,7 +178,7 @@
                               my-2
                             "
                           >
-                            <a id="approach1.1">APPROACH 3.1 </a>
+                            <a id="approach3.1">APPROACH 3.1 </a>
                           </h4>
                         </div>
                         <hr style="height: 1px; background-color: #efefef" />
@@ -184,7 +245,7 @@
                               my-2
                             "
                           >
-                            <a id="approach1.2">APPROACH 3.2 </a>
+                            <a id="approach3.2">APPROACH 3.2 </a>
                           </h4>
                         </div>
                         <hr style="height: 1px; background-color: #efefef" />
@@ -247,7 +308,7 @@
                               my-2
                             "
                           >
-                            <a id="approach1.3">APPROACH 3.3 </a>
+                            <a id="approach3.3">APPROACH 3.3 </a>
                           </h4>
                         </div>
                         <hr style="height: 1px; background-color: #efefef" />
@@ -282,7 +343,7 @@
             <div class="col text-sm-left text-center mb-5">
               <a href="approach-2.html" class="btn btn-primary shadow btn-lg">
                 <i class="fas fa-arrow-left text-light" aria-hidden="true"></i>
-                View Approach 2
+                Multi frame SVM
               </a>
             </div>
           </div>

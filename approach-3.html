@@ -137,20 +137,20 @@
               <h1 style="color: #5a5c69; font-size: 2em; font-weight: 500">
                 Single Frame CNN
               </h1>
-              <br>
-              <p style="text-align: justify;">
-                Deep Learning has been shown to learn highly effective features from image and video data, yielding high accuracy in many 
-              tasks. We have performed many training experiments on AWS g4dn.xlarge instance (with Tesla T4 GPU) in this phase. The data 
-              preparation and CNN architecture details are as given below.
+              <br />
+              <p style="text-align: justify">
+                Deep Learning has been shown to learn highly effective features
+                from image and video data, yielding high accuracy in many tasks.
+                We have performed many training experiments on AWS g4dn.xlarge
+                instance (with Tesla T4 GPU) in this phase. The data preparation
+                and CNN architecture details are as given below.
               </p>
-    
             </div>
 
             <div class="row">
               <div class="col-md-12 col-xl-12 mb-4">
                 <div class="card shadow mb-4">
                   <div class="card-body">
-
                     <div class="row align-items-center no-gutters">
                       <div class="col mr-1">
                         <div class="approach-heading-div">
@@ -168,32 +168,56 @@
 
                         <hr style="height: 1px; background-color: #efefef" />
 
-                        <b>Train-test-validation split:</b> <br><br>
-                        We have used 66 videos for training, 22 for testing and 16 for validation.
-                        <br>
-                        <br>
+                        <b>Train-test-validation split:</b> <br /><br />
+                        We have used 66 videos for training, 22 for testing and
+                        16 for validation.
+                        <br />
+                        <br />
 
-                        <b>Data pipeline (Using Dataset API of tensorflow):</b> <br><br>
-                        Firstly, we created a list of filenames to jpg images (for this, we stored all individual frames of the videos in
-                        a separate folder) and a corresponding list of labels.  
-                        We applied following steps to create the input pipeline for our model:
-                        <br><br>
+                        <b>Data pipeline (Using Dataset API of tensorflow):</b>
+                        <br /><br />
+                        Firstly, we created a list of filenames to jpg images
+                        (for this, we stored all individual frames of the videos
+                        in a separate folder) and a corresponding list of
+                        labels. We applied following steps to create the input
+                        pipeline for our model:
+                        <br /><br />
                         <ol>
-                          <li>Created dataset from slices of the filenames and labels</li>
-                          <li>Shuffled the data with a buffer size equal to the length of the dataset. This ensures good shuffling.</li>
-                          <li>Parsed the images from filename to the pixel values. We used multiple threads to improve the speed of 
-                            preprocessing.</li>
-                          <li>Applied data augmentation for the images. For data augmentation, we used random brigtness, contrast and
-                            saturation to the images. Also, we used multiple threads to improve the speed of preprocessing</li>
+                          <li>
+                            Created dataset from slices of the filenames and
+                            labels
+                          </li>
+                          <li>
+                            Shuffled the data with a buffer size equal to the
+                            length of the dataset. This ensures good shuffling.
+                          </li>
+                          <li>
+                            Parsed the images from filename to the pixel values.
+                            We used multiple threads to improve the speed of
+                            preprocessing.
+                          </li>
+                          <li>
+                            Applied data augmentation for the images. For data
+                            augmentation, we used random brigtness, contrast and
+                            saturation to the images. Also, we used multiple
+                            threads to improve the speed of preprocessing
+                          </li>
                           <li>Batched the images (batch size = 16).</li>
-                          <li>Prefetched one batch to make sure that a batch is ready to be served at all time.</li>
+                          <li>
+                            Prefetched one batch to make sure that a batch is
+                            ready to be served at all time.
+                          </li>
                         </ol>
-                        <br>
-                        Reference used : <cite><a href="https://cs230.stanford.edu/blog/datapipeline/" target="_blank">
-                          https://cs230.stanford.edu/blog/datapipeline/</a> 
-                          </cite>
-                        
-                        
+                        <br />
+                        Reference used :
+                        <cite
+                          ><a
+                            href="https://cs230.stanford.edu/blog/datapipeline/"
+                            target="_blank"
+                          >
+                            https://cs230.stanford.edu/blog/datapipeline/</a
+                          >
+                        </cite>
                       </div>
                     </div>
                   </div>
@@ -205,7 +229,6 @@
               <div class="col-md-12 col-xl-12 mb-4">
                 <div class="card shadow mb-4">
                   <div class="card-body">
-
                     <div class="row align-items-center no-gutters">
                       <div class="col mr-1">
                         <div class="approach-heading-div">
@@ -221,56 +244,79 @@
                           </h4>
                         </div>
                         <hr style="height: 1px; background-color: #efefef" />
-                        <p style="text-align: justify;">
-                        In Approach 3.1, we used the MobileNetV2 architecture with additional dense layers at the top. 
-                        We used <strong> MobileNetV2</strong> because it is a lightweight architecture particularly useful for mobile and 
-                        embedded vision applications. Python implementation for the same can be found 
-                        <a href="https://github.com/roadcross-assistant/Project/blob/master/DL/Approach_3.1.py"> <u> here</u></a>.
+                        <p style="text-align: justify">
+                          In Approach 3.1, we used the MobileNetV2 architecture
+                          with additional dense layers at the top. We used
+                          <strong> MobileNetV2</strong> because it is a
+                          lightweight architecture particularly useful for
+                          mobile and embedded vision applications. Python
+                          implementation for the same can be found
+                          <a
+                            href="https://github.com/roadcross-assistant/Project/blob/master/DL/Approach_3.1.py"
+                          >
+                            <u> here</u></a
+                          >.
                         </p>
-                        
-                        
+
                         <div class="text-center">
                           <img
-                            src="assets/img/approach_3.1.png" width=80% 
+                            src="assets/img/approach_3.1.png"
+                            width="80%"
                             class="img-fluid"
                           />
                         </div>
-                        <br>
-                        
-                        <div class="text-primary font-weight-bold text-xls mb-1 h5">
+                        <br />
+
+                        <div
+                          class="text-primary font-weight-bold text-xls mb-1 h5"
+                        >
                           <span>Model training</span>
                         </div>
-                        <br>
+                        <br />
                         <ul>
-                          <li>We trained the model for <strong>150 epochs</strong> , saving checkpoint for the best value of 
-                            <i>precision@90recall</i>.
-                          </li> 
                           <li>
-                            Loss function used: <strong>BinaryCrossentropy</strong>. We also assigned class weights <i>(unsafe: 1 , safe:2)</i>  while 
-                            training as our dataset is imbalanced.
+                            We trained the model for
+                            <strong>150 epochs</strong> , saving checkpoint for
+                            the best value of <i>precision@90recall</i>.
+                          </li>
+                          <li>
+                            Loss function used:
+                            <strong>BinaryCrossentropy</strong>. We also
+                            assigned class weights
+                            <i>(unsafe: 1 , safe:2)</i> while training as our
+                            dataset is imbalanced.
                           </li>
                           <li>
                             Optimizer used: <strong>Adam optimizer</strong>.
                           </li>
                         </ul>
 
-                        <div class="text-primary font-weight-bold text-xls mb-1 h5">
+                        <div
+                          class="text-primary font-weight-bold text-xls mb-1 h5"
+                        >
                           <span>Model performance</span>
                         </div>
-                        <br>
+                        <br />
                         <ul>
                           <li>
-                            Precision : <strong>0.90</strong>, Recall : <strong>0.99</strong>, Binary accuracy: <strong>0.99</strong> (on train data)
-                           </li>
-                         <li>
-                          Precision : <strong>0.90</strong>, Recall : <strong>0.60</strong>, Binary accuracy: <strong>0.85</strong> (on test data)
-                         </li>
-                         <li>
-                           Throughput on Jetson Nano after conversion into TensorRT graph: <strong>15 fps</strong>.
-                         </li>
+                            Precision : <strong>0.90</strong>, Recall :
+                            <strong>0.99</strong>, Binary accuracy:
+                            <strong>0.99</strong> (on train data)
+                          </li>
+                          <li>
+                            Precision : <strong>0.90</strong>, Recall :
+                            <strong>0.60</strong>, Binary accuracy:
+                            <strong>0.85</strong> (on test data)
+                          </li>
+                          <li>
+                            Throughput on Jetson Nano after conversion into
+                            TensorRT graph: <strong>15 fps</strong>.
+                          </li>
                         </ul>
 
-                        <div class="text-primary font-weight-bold text-xls mb-1 h5">
+                        <div
+                          class="text-primary font-weight-bold text-xls mb-1 h5"
+                        >
                           <span>Sample Prediction Outputs (to be changed)</span>
                         </div>
 
@@ -326,145 +372,161 @@
                             <figcaption>False Negative</figcaption>
                             <br />
                           </div>
-
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
 
-            <div class="row">
-              <div class="col-md-12 col-xl-12 mb-4">
-                <div class="card shadow mb-4">
-                  <div class="card-body">
-                    <div class="row align-items-center no-gutters">
-                      <div class="col mr-1">
-                        <div class="approach-heading-div">
-                          <h4
+              <div class="row">
+                <div class="col-md-12 col-xl-12 mb-4">
+                  <div class="card shadow mb-4">
+                    <div class="card-body">
+                      <div class="row align-items-center no-gutters">
+                        <div class="col mr-1">
+                          <div class="approach-heading-div">
+                            <h4
+                              class="
+                                text-capitalize text-primary
+                                font-weight-bold
+                                text-xls
+                                my-2
+                              "
+                            >
+                              <a id="approach3.2">APPROACH 3.2 </a>
+                            </h4>
+                          </div>
+                          <hr style="height: 1px; background-color: #efefef" />
+                          Due to issues we were facing with custom MobileNetv2
+                          model architecture and such standard architectures are
+                          built and used for general purpose applications, we
+                          moved to next DL approach that is to
+                          <strong> create </strong>our
+                          <strong>own custom model</strong> from scratch for
+                          application-specific purpose in the project.
+                          <br /><br />
+                          <div>
+                            <img
+                              src="assets/img/custom_model_big_kernel.png"
+                              class="img-fluid"
+                            />
+                          </div>
+                          <br />
+                          <div class="text-dark h6 mb-0">
+                            <span>
+                              In this approach, we are able to overcome the
+                              issues of overfitting on the training dataset and
+                              achieve better accuracy metrics for the same. The
+                              python script for this architecture is available
+                              <a
+                                href="#link_to_custom_model_with_big_kernel_size"
+                                target="_blank"
+                              >
+                                <u>here</u>.</a
+                              >
+                              <br /><br />
+                            </span>
+                          </div>
+                          <br />
+                          <div
                             class="
-                              text-capitalize text-primary
+                              text-primary
                               font-weight-bold
                               text-xls
-                              my-2
+                              mb-1
+                              h5
                             "
                           >
-                            <a id="approach3.2">APPROACH 3.2 </a>
-                          </h4>
+                            <span>Model performance</span>
+                          </div>
+                          accuracy, speed and performance issues on jetson nano
                         </div>
-                        <hr style="height: 1px; background-color: #efefef" />
-                        Due to issues we were facing with custom MobileNetv2
-                        model architecture and such standard architectures are
-                        built and used for general purpose applications, we
-                        moved to next DL approach that is to
-                        <strong> create </strong>our
-                        <strong>own custom model</strong> from scratch for
-                        application-specific purpose in the project.
-                        <br /><br />
-                        <div>
-                          <img
-                            src="assets/img/custom_model_big_kernel.png"
-                            class="img-fluid"
-                          />
-                        </div>
-                        <br />
-                        <div class="text-dark h6 mb-0">
-                          <span>
-                            In this approach, we are able to overcome the issues
-                            of overfitting on the training dataset and achieve
-                            better accuracy metrics for the same. The python
-                            script for this architecture is available
-                            <a
-                              href="#link_to_custom_model_with_big_kernel_size"
-                              target="_blank"
-                            >
-                              <u>here</u>.</a
-                            >
-                            <br /><br />
-                          </span>
-                        </div>
-                        <br />
-                        <div
-                          class="text-primary font-weight-bold text-xls mb-1 h5"
-                        >
-                          <span>Model performance</span>
-                        </div>
-                        accuracy, speed and performance issues on jetson nano
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
 
-            <div class="row">
-              <div class="col-md-12 col-xl-12 mb-4">
-                <div class="card shadow mb-4">
-                  <div class="card-body">
-                    <div class="row align-items-center no-gutters">
-                      <div class="col mr-1">
-                        <div class="approach-heading-div">
-                          <h4
-                            class="
-                              text-capitalize text-primary
-                              font-weight-bold
-                              text-xls
-                              my-2
-                            "
+              <div class="row">
+                <div class="col-md-12 col-xl-12 mb-4">
+                  <div class="card shadow mb-4">
+                    <div class="card-body">
+                      <div class="row align-items-center no-gutters">
+                        <div class="col mr-1">
+                          <div class="approach-heading-div">
+                            <h4
+                              class="
+                                text-capitalize text-primary
+                                font-weight-bold
+                                text-xls
+                                my-2
+                              "
+                            >
+                              <a id="approach3.3">APPROACH 3.3 </a>
+                            </h4>
+                          </div>
+                          <hr style="height: 1px; background-color: #efefef" />
+                          Our model with dilated convolutions <br />
+                          We needed a much faster and light-weight model so that
+                          it can run on small computing devices like Jetson Nano
+                          on a realtime-basis on live video stream. <br />
+                          In this approach, we have applied a concept known as
+                          <strong>Dilated Convolution</strong> in our custom
+                          model from approach 3.2. You can get more idea about
+                          this from the reference about dilated convolutions on
+                          <a
+                            href="https://erogol.com/dilated-convolution/"
+                            target="_blank"
                           >
-                            <a id="approach3.3">APPROACH 3.3 </a>
-                          </h4>
+                            erogol.com.
+                          </a>
+                          <div class="text-center">
+                            <img
+                              src="assets/img/custom_model_dilated_convolution.png"
+                              class="img-fluid"
+                              alt=""
+                            />
+                          </div>
+                          <br />
+                          By using dilated convolution in the model architecture
+                          for our advantange, we are able to achieve higher
+                          throughput (number of predictions of video frames per
+                          second) without affecting the accuracy of prediction
+                          model.
+                          <br /><br />
                         </div>
-                        <hr style="height: 1px; background-color: #efefef" />
-                        Our model with dilated convolutions <br />
-                        We needed a much faster and light-weight model so that
-                        it can run on small computing devices like Jetson Nano
-                        on a realtime-basis on live video stream. <br />
-                        In this approach, we have applied a concept known as
-                        <strong>Dilated Convolution</strong> in our custom model
-                        from approach 3.2. You can get more idea about this from
-                        the reference about dilated convolutions on
-                        <a
-                          href="https://erogol.com/dilated-convolution/"
-                          target="_blank"
-                        >
-                          erogol.com.
-                        </a>
-                        <br />
-                        By using dilated convolution in the model architecture
-                        for our advantange, we are able to achieve higher
-                        throughput (number of predictions of video frames per
-                        second) without affecting the accuracy of prediction
-                        model.
-                        <br /><br />
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
 
-            <div class="col text-sm-left text-center mb-5">
-              <a href="approach-2.html" class="btn btn-primary shadow btn-lg">
-                <i class="fas fa-arrow-left text-light" aria-hidden="true"></i>
-                Multi frame SVM
-              </a>
+              <div class="col text-sm-left text-center mb-5">
+                <a href="approach-2.html" class="btn btn-primary shadow btn-lg">
+                  <i
+                    class="fas fa-arrow-left text-light"
+                    aria-hidden="true"
+                  ></i>
+                  Multi frame SVM
+                </a>
+              </div>
             </div>
+            <footer class="bg-white sticky-footer shadow">
+              <div class="container my-auto">
+                <div class="text-center my-auto copyright">
+                  <span>Copyright © Siddhi Brahmbhatt | Yagnesh Patil</span>
+                </div>
+              </div>
+            </footer>
           </div>
-          <footer class="bg-white sticky-footer shadow">
-            <div class="container my-auto">
-              <div class="text-center my-auto copyright">
-                <span>Copyright © Siddhi Brahmbhatt | Yagnesh Patil</span>
-              </div>
-            </div>
-          </footer>
         </div>
       </div>
-    </div>
-    <div>
-      <a class="border rounded-circle d-inline scroll-to-top" href="#page-top"
-        ><i class="fas fa-arrow-up"></i
-      ></a>
+      <div>
+        <a class="border rounded-circle d-inline scroll-to-top" href="#page-top"
+          ><i class="fas fa-arrow-up"></i
+        ></a>
+      </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>

@@ -226,6 +226,7 @@
             </div>
 
             <div class="row">
+
               <div class="col-md-12 col-xl-12 mb-4">
                 <div class="card shadow mb-4">
                   <div class="card-body">
@@ -245,9 +246,319 @@
                         </div>
                         <hr style="height: 1px; background-color: #efefef" />
                         <p style="text-align: justify">
-                          In Approach 3.1, we used the MobileNetV2 architecture
+                          In Approach 3.1, we used the <strong> MobileNetV2</strong> architecture
                           with additional dense layers at the top. We used
-                          <strong> MobileNetV2</strong> because it is a
+                          MobileNetV2 because it is a
+                          lightweight architecture particularly useful for
+                          mobile and embedded vision applications. 
+                        </p>
+
+                        <div class="text-center">
+                          <img
+                            src="assets/img/approach_3.1.png"
+                            width="80%"
+                            class="img-fluid"
+                          />
+                        </div>
+                        <br />
+
+                        <div
+                          class="text-primary font-weight-bold text-xls mb-1 h5"
+                        >
+                          <span>Model training</span>
+                        </div>
+                        <br />
+                        <ul>
+                          <li>
+                            We trained the model for
+                            <strong>150 epochs</strong> , saving checkpoint for
+                            the best value of <i>precision@90recall</i>.
+                          </li>
+                          <li>
+                            Loss function used:
+                            <strong>BinaryCrossentropy</strong>. We also
+                            assigned class weights
+                            <i>(unsafe: 1 , safe:2)</i> while training as our
+                            dataset is imbalanced.
+                          </li>
+                          <li>
+                            Optimizer used: <strong>Adam optimizer</strong>.
+                          </li>
+                          <li>
+                            Python
+                          implementation for the same can be found
+                          <a
+                            href="https://github.com/roadcross-assistant/Project/blob/master/DL/Approach_3.1.py"
+                          >
+                            <u> here</u></a
+                          >.
+                          </li>
+                        </ul>
+
+                        <div
+                          class="text-primary font-weight-bold text-xls mb-1 h5"
+                        >
+                          <span>Model performance</span>
+                        </div>
+                        <br />
+                        <ul>
+                          <li>
+                            Precision : <strong>0.90</strong>, Recall :
+                            <strong>0.99</strong>, Binary accuracy:
+                            <strong>0.99</strong> (on train data)
+                          </li>
+                          <li>
+                            Precision : <strong>0.90</strong>, Recall :
+                            <strong>0.60</strong>, Binary accuracy:
+                            <strong>0.85</strong> (on test data)
+                          </li>
+                          <li>
+                            Throughput on Jetson Nano after conversion into
+                            TensorRT graph: <strong>15 fps</strong>.
+                          </li>
+                        </ul>
+
+                        <div
+                          class="text-primary font-weight-bold text-xls mb-1 h5"
+                        >
+                          <span>Sample Prediction Outputs (to be changed)</span>
+                        </div>
+
+                        <br />
+                        <div class="row">
+                          <div class="images-row col-lg-4 col-sm-12">
+                            <img
+                              src="assets/img/approach_1.1_frames/tp1.jpg"
+                              width="100%"
+                            />
+                            <figcaption>True Positive</figcaption>
+                            <br />
+                          </div>
+                          <div class="images-row col-lg-4 col-sm-12">
+                            <img
+                              src="assets/img/approach_1.1_frames/tp2.jpg"
+                              width="100%"
+                            />
+                            <figcaption>True Positive</figcaption>
+                            <br />
+                          </div>
+                          <div class="images-row col-lg-4 col-sm-12">
+                            <img
+                              src="assets/img/approach_1.1_frames/tn1.jpg"
+                              width="100%"
+                            />
+                            <figcaption>True Negative</figcaption>
+                            <br />
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="images-row col-lg-4 col-sm-12">
+                            <img
+                              src="assets/img/approach_1.1_frames/fp1.jpg"
+                              width="100%"
+                            />
+                            <figcaption>False Positive</figcaption>
+                            <br />
+                          </div>
+                          <div class="images-row col-lg-4 col-sm-12">
+                            <img
+                              src="assets/img/approach_1.1_frames/fp2.jpg"
+                              width="100%"
+                            />
+                            <figcaption>False Positive</figcaption>
+                            <br />
+                          </div>
+                          <div class="images-row col-lg-4 col-sm-12">
+                            <img
+                              src="assets/img/approach_1.1_frames/fn1.jpg"
+                              width="100%"
+                            />
+                            <figcaption>False Negative</figcaption>
+                            <br />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="row">
+
+              <div class="col-md-12 col-xl-12 mb-4">
+                <div class="card shadow mb-4">
+                  <div class="card-body">
+                    <div class="row align-items-center no-gutters">
+                      <div class="col mr-1">
+                        <div class="approach-heading-div">
+                          <h4
+                            class="
+                              text-capitalize text-primary
+                              font-weight-bold
+                              text-xls
+                              my-2
+                            "
+                          >
+                            <a id="approach3.1">APPROACH 3.2 </a>
+                          </h4>
+                        </div>
+                        <hr style="height: 1px; background-color: #efefef" />
+                        <p style="text-align: justify">
+                          As Approach 3.1 did not give a satisfactory performance on test data, in Approach 3.2 we have 
+                          developed our own CNN architecture from scratch.
+                        </p>
+
+                        <div class="text-center">
+                          <img
+                            src="assets/img/approach_3.2.png"
+                            width="80%"
+                            class="img-fluid"
+                          />
+                        </div>
+                        <br />
+
+                        <div
+                          class="text-primary font-weight-bold text-xls mb-1 h5"
+                        >
+                          <span>Model training</span>
+                        </div>
+                        <br />
+                        <ul>
+                          <li>
+                            We trained the model for
+                            <strong>100 epochs</strong> , saving checkpoint for
+                            the best value of <i>precision@90recall</i>.
+                          </li>
+                          <li>
+                            Loss function used:
+                            <strong>BinaryCrossentropy</strong>. We also
+                            assigned class weights
+                            <i>(unsafe: 1 , safe:2)</i> while training as our
+                            dataset is imbalanced.
+                          </li>
+                          <li>
+                            Optimizer used: <strong>Adam optimizer</strong> with learning rate equal to 0.0002.
+                          </li>
+                        </ul>
+
+                        <div
+                          class="text-primary font-weight-bold text-xls mb-1 h5"
+                        >
+                          <span>Model performance</span>
+                        </div>
+                        <br />
+                        <ul>
+                          <li>
+                            Precision : <strong>0.90</strong>, Recall :
+                            <strong>0.99</strong>, Binary accuracy:
+                            <strong>0.99</strong> (on train data)
+                          </li>
+                          <li>
+                            Precision : <strong>0.90</strong>, Recall :
+                            <strong>0.72</strong>, Binary accuracy:
+                            <strong>0.89</strong> (on test data)
+                          </li>
+                          <li>
+                            Throughput on Jetson Nano after conversion into
+                            TensorRT graph: <strong>3 fps</strong>. The inference
+                            speed on Jetson Nano is very low because our architecture had 
+                            convolutional layers with larger kernel size (i.e. >3) - so the 
+                            TensorRT graph could not be optimized.
+                          </li>
+                        </ul>
+
+                        <div
+                          class="text-primary font-weight-bold text-xls mb-1 h5"
+                        >
+                          <span>Sample Prediction Outputs (to be changed)</span>
+                        </div>
+
+                        <br />
+                        <div class="row">
+                          <div class="images-row col-lg-4 col-sm-12">
+                            <img
+                              src="assets/img/approach_1.1_frames/tp1.jpg"
+                              width="100%"
+                            />
+                            <figcaption>True Positive</figcaption>
+                            <br />
+                          </div>
+                          <div class="images-row col-lg-4 col-sm-12">
+                            <img
+                              src="assets/img/approach_1.1_frames/tp2.jpg"
+                              width="100%"
+                            />
+                            <figcaption>True Positive</figcaption>
+                            <br />
+                          </div>
+                          <div class="images-row col-lg-4 col-sm-12">
+                            <img
+                              src="assets/img/approach_1.1_frames/tn1.jpg"
+                              width="100%"
+                            />
+                            <figcaption>True Negative</figcaption>
+                            <br />
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="images-row col-lg-4 col-sm-12">
+                            <img
+                              src="assets/img/approach_1.1_frames/fp1.jpg"
+                              width="100%"
+                            />
+                            <figcaption>False Positive</figcaption>
+                            <br />
+                          </div>
+                          <div class="images-row col-lg-4 col-sm-12">
+                            <img
+                              src="assets/img/approach_1.1_frames/fp2.jpg"
+                              width="100%"
+                            />
+                            <figcaption>False Positive</figcaption>
+                            <br />
+                          </div>
+                          <div class="images-row col-lg-4 col-sm-12">
+                            <img
+                              src="assets/img/approach_1.1_frames/fn1.jpg"
+                              width="100%"
+                            />
+                            <figcaption>False Negative</figcaption>
+                            <br />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+
+              <div class="col-md-12 col-xl-12 mb-4">
+                <div class="card shadow mb-4">
+                  <div class="card-body">
+                    <div class="row align-items-center no-gutters">
+                      <div class="col mr-1">
+                        <div class="approach-heading-div">
+                          <h4
+                            class="
+                              text-capitalize text-primary
+                              font-weight-bold
+                              text-xls
+                              my-2
+                            "
+                          >
+                            <a id="approach3.1">APPROACH 3.3 </a>
+                          </h4>
+                        </div>
+                        <hr style="height: 1px; background-color: #efefef" />
+                        <p style="text-align: justify">
+                          In Approach 3.1, we used the <strong> MobileNetV2</strong> architecture
+                          with additional dense layers at the top. We used
+                          MobileNetV2 because it is a
                           lightweight architecture particularly useful for
                           mobile and embedded vision applications. Python
                           implementation for the same can be found
@@ -378,130 +689,9 @@
                   </div>
                 </div>
               </div>
+            </div>
 
-              <div class="row">
-                <div class="col-md-12 col-xl-12 mb-4">
-                  <div class="card shadow mb-4">
-                    <div class="card-body">
-                      <div class="row align-items-center no-gutters">
-                        <div class="col mr-1">
-                          <div class="approach-heading-div">
-                            <h4
-                              class="
-                                text-capitalize text-primary
-                                font-weight-bold
-                                text-xls
-                                my-2
-                              "
-                            >
-                              <a id="approach3.2">APPROACH 3.2 </a>
-                            </h4>
-                          </div>
-                          <hr style="height: 1px; background-color: #efefef" />
-                          Due to issues we were facing with custom MobileNetv2
-                          model architecture and such standard architectures are
-                          built and used for general purpose applications, we
-                          moved to next DL approach that is to
-                          <strong> create </strong>our
-                          <strong>own custom model</strong> from scratch for
-                          application-specific purpose in the project.
-                          <br /><br />
-                          <div>
-                            <img
-                              src="assets/img/custom_model_big_kernel.png"
-                              class="img-fluid"
-                            />
-                          </div>
-                          <br />
-                          <div class="text-dark h6 mb-0">
-                            <span>
-                              In this approach, we are able to overcome the
-                              issues of overfitting on the training dataset and
-                              achieve better accuracy metrics for the same. The
-                              python script for this architecture is available
-                              <a
-                                href="#link_to_custom_model_with_big_kernel_size"
-                                target="_blank"
-                              >
-                                <u>here</u>.</a
-                              >
-                              <br /><br />
-                            </span>
-                          </div>
-                          <br />
-                          <div
-                            class="
-                              text-primary
-                              font-weight-bold
-                              text-xls
-                              mb-1
-                              h5
-                            "
-                          >
-                            <span>Model performance</span>
-                          </div>
-                          accuracy, speed and performance issues on jetson nano
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="col-md-12 col-xl-12 mb-4">
-                  <div class="card shadow mb-4">
-                    <div class="card-body">
-                      <div class="row align-items-center no-gutters">
-                        <div class="col mr-1">
-                          <div class="approach-heading-div">
-                            <h4
-                              class="
-                                text-capitalize text-primary
-                                font-weight-bold
-                                text-xls
-                                my-2
-                              "
-                            >
-                              <a id="approach3.3">APPROACH 3.3 </a>
-                            </h4>
-                          </div>
-                          <hr style="height: 1px; background-color: #efefef" />
-                          Our model with dilated convolutions <br />
-                          We needed a much faster and light-weight model so that
-                          it can run on small computing devices like Jetson Nano
-                          on a realtime-basis on live video stream. <br />
-                          In this approach, we have applied a concept known as
-                          <strong>Dilated Convolution</strong> in our custom
-                          model from approach 3.2. You can get more idea about
-                          this from the reference about dilated convolutions on
-                          <a
-                            href="https://erogol.com/dilated-convolution/"
-                            target="_blank"
-                          >
-                            erogol.com.
-                          </a>
-                          <div class="text-center">
-                            <img
-                              src="assets/img/custom_model_dilated_convolution.png"
-                              class="img-fluid"
-                              alt=""
-                            />
-                          </div>
-                          <br />
-                          By using dilated convolution in the model architecture
-                          for our advantange, we are able to achieve higher
-                          throughput (number of predictions of video frames per
-                          second) without affecting the accuracy of prediction
-                          model.
-                          <br /><br />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
+              
               <div class="col text-sm-left text-center mb-5">
                 <a href="approach-2.html" class="btn btn-primary shadow btn-lg">
                   <i

@@ -1,293 +1,693 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
     <title>Dataset • RCA</title>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
-    <link rel="stylesheet" href="assets/styles/dataset-styles.css">
-    <link rel="stylesheet" href="assets/styles/home-styles.css">
-    <link rel="stylesheet" href="assets/styles/zoom.css">
-</head>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Montserrat:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.12.0/css/all.css"
+    />
+    <link rel="stylesheet" href="assets/styles/dataset-styles.css" />
+    <link rel="stylesheet" href="assets/styles/home-styles.css" />
+    <link rel="stylesheet" href="assets/styles/zoom.css" />
+  </head>
 
-<body id="page-top">
+  <body id="page-top">
     <div id="wrapper" class="text-dark">
-        <nav class="navbar1 navbar-dark align-items-start sidebar sidebar-dark accordion bg-gradient-primary p-0">
-            <div class="container-fluid d-flex flex-column p-0">
-                <button class="btn btn-link d-md-none rounded-circle mt-3 text-light" id="sidebarToggleTop" type="button"><i class="fas fa-arrow-left"></i></button>
-                <br class="d-none d-sm-block">
-                <br class="d-none d-sm-block">
-                <br class="d-sm-none">
-                <ul class="nav navbar-nav text-light " id="accordionSidebar">
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="index.html"><i class="fas fa-home"></i><span>Home</span></a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link active" href="#"><i class="fas fa-database"></i><span>Dataset</span></a></li>
-                    <li class="nav-item dropdown approach-dropdown">
-                        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="model_training.html"><i class="fas fa-project-diagram"></i><span>Model <br class="d-sm-none"> Training</span></a>
-                        <div class="dropdown-menu approach-menu shadow" aria-labelledby="navbarDropdown">
-                          <a class="dropdown-item approach-item" href="overview.html">Overview</a>
-                          <a class="dropdown-item approach-item" href="approach-1.html">Single frame SVM</a>
-                          <a class="dropdown-item approach-item" href="approach-2.html">Multi frame SVM</a>
-                          <a class="dropdown-item approach-item" href="approach-3.html">Single frame CNN</a>
-                          <!-- <a class="dropdown-item approach-item" href="approach-3.html">Approach 3</a> -->
-                        </div>
-                      </li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="deployment.html"><i class="fas fa-blind"></i><span>Deployment</span></a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="about.html"><i class="fas fa-user-friends"></i><span>About Us</span></a></li>
-                </ul>
-                <div class="text-center d-none d-md-inline"><button class="btn rounded-circle border-0" id="sidebarToggle" type="button"></button></div>
+      <nav
+        class="
+          navbar1
+          navbar-dark
+          align-items-start
+          sidebar sidebar-dark
+          accordion
+          bg-gradient-primary
+          p-0
+        "
+      >
+        <div class="container-fluid d-flex flex-column p-0">
+          <button
+            class="btn btn-link d-md-none rounded-circle mt-3 text-light"
+            id="sidebarToggleTop"
+            type="button"
+          >
+            <i class="fas fa-arrow-left"></i>
+          </button>
+          <br class="d-none d-sm-block" />
+          <br class="d-none d-sm-block" />
+          <br class="d-sm-none" />
+          <ul class="nav navbar-nav text-light" id="accordionSidebar">
+            <li class="nav-item" role="presentation">
+              <a class="nav-link" href="index.html"
+                ><i class="fas fa-home"></i><span>Home</span></a
+              >
+            </li>
+            <li class="nav-item" role="presentation">
+              <a class="nav-link active" href="#"
+                ><i class="fas fa-database"></i><span>Dataset</span></a
+              >
+            </li>
+            <li class="nav-item dropdown approach-dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                id="navbarDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+                href="model_training.html"
+                ><i class="fas fa-project-diagram"></i
+                ><span
+                  >Model <br class="d-sm-none" />
+                  Training</span
+                ></a
+              >
+              <div
+                class="dropdown-menu approach-menu shadow"
+                aria-labelledby="navbarDropdown"
+              >
+                <a class="dropdown-item approach-item" href="overview.html"
+                  >Overview</a
+                >
+                <a class="dropdown-item approach-item" href="approach-1.html"
+                  >Single frame SVM</a
+                >
+                <a class="dropdown-item approach-item" href="approach-2.html"
+                  >Multi frame SVM</a
+                >
+                <a class="dropdown-item approach-item" href="approach-3.html"
+                  >Single frame CNN</a
+                >
+              </div>
+            </li>
+            <li class="nav-item" role="presentation">
+              <a class="nav-link" href="deployment.html"
+                ><i class="fas fa-blind"></i><span>Deployment</span></a
+              >
+            </li>
+            <li class="nav-item" role="presentation">
+              <a class="nav-link" href="about.html"
+                ><i class="fas fa-user-friends"></i><span>About Us</span></a
+              >
+            </li>
+          </ul>
+          <div class="text-center d-none d-md-inline">
+            <button
+              class="btn rounded-circle border-0"
+              id="sidebarToggle"
+              type="button"
+            ></button>
+          </div>
+        </div>
+      </nav>
+
+      <div class="d-flex flex-column" id="content-wrapper">
+        <div id="content">
+          <nav
+            class="
+              navbar navbar-light navbar-expand
+              bg-white
+              shadow
+              mb-4
+              topbar
+              static-top
+            "
+          >
+            <div class="container-fluid">
+              <button
+                class="btn btn-link d-md-none rounded-circle mr-3"
+                id="sidebarToggleTop"
+                type="button"
+              >
+                <i class="fas fa-bars"></i>
+              </button>
+              <p id="project-title">Road Crossing Assistant</p>
             </div>
-        </nav>
+          </nav>
 
-        <div class="d-flex flex-column" id="content-wrapper">
-            <div id="content">
-                <nav class="navbar navbar-light navbar-expand bg-white shadow mb-4 topbar static-top">
-                    <div class="container-fluid"><button class="btn btn-link d-md-none rounded-circle mr-3" id="sidebarToggleTop" type="button"><i class="fas fa-bars"></i></button>
-                        <p id="project-title">Road Crossing Assistant</p>
-                    </div>
-                </nav>
-
-        <div class="container-fluid">
+          <div class="container-fluid">
             <div class="row camera-and-description-div">
-                <div class="col-md-12 col-xl-12 mb-4">
-                    <div class="card shadow py-2">
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="camera-img-div col-lg-4 col-sm-12">
-                                    <br><br>
-                                    <img src="assets/img/action-camera.jpeg" class="img-fluid">
-                                </div>
-                                <div class="dataset-description-div col-lg-8 pl-lg-5 col-sm-12 border-left-success">
-                                    <h4 class="text-capitalize text-primary font-weight-bold text-xls mb-1">
-                                        <span>Dataset Description<br></span>
-                                    </h4>
-                                    <ol class="description-ul list-group">
-                                        <li class="list-group-item"><b>104 videos </b>from diverse locations, time, traffic patterns,
-                                            collected using an action camera from different roads of Anand, Gujarat.</li>
-                                        <li class="list-group-item"><b>Video Specifications -</b> Format: MOV, Resolution: 1920*1080, <br>
-                                            Framerate: 30 fps, More than 26k frames in total</li>
-                                        <li class="list-group-item"><b>Annotations:</b> Annotated each video with a time instance when the
-                                            road is safe to cross and the instance when the safe duration ends.</li>
-                                        <li class="list-group-item">
-                                            <a href="https://forms.gle/xtkZexnEuRVYfwAT6" target="_blank"> <b> Detailed Description of Dataset and Download links </b> <img style="vertical-align: sub;" src="https://img.icons8.com/fluent-systems-filled/18/0275d8/external-link.png"/></a> </li>
-                                    </ol>
-                                </div>
-                            </div>
-                        </div>
+              <div class="col-md-12 col-xl-12 mb-4">
+                <div class="card shadow py-2">
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="camera-img-div col-lg-4 col-sm-12">
+                        <br /><br />
+                        <img
+                          src="assets/img/hardware-action-camera.jpeg"
+                          class="img-fluid"
+                        />
+                      </div>
+                      <div
+                        class="
+                          dataset-description-div
+                          col-lg-8
+                          pl-lg-5
+                          col-sm-12
+                          border-left-primary
+                        "
+                      >
+                        <h4
+                          class="
+                            text-capitalize text-primary
+                            font-weight-bold
+                            text-xls
+                            mb-1
+                          "
+                        >
+                          <span>Dataset Description<br /></span>
+                        </h4>
+                        <ol class="description-ul list-group">
+                          <li class="list-group-item">
+                            <b>104 videos </b>from diverse locations, time,
+                            traffic patterns, collected using an action camera
+                            from different roads of Anand, Gujarat.
+                          </li>
+                          <li class="list-group-item">
+                            <b>Video Specifications -</b> Format: MOV,
+                            Resolution: 1920*1080, <br />
+                            Framerate: 30 fps, More than 26k frames in total
+                          </li>
+                          <li class="list-group-item">
+                            <b>Annotations:</b> Annotated each video with a time
+                            instance when the road is safe to cross and the
+                            instance when the safe duration ends.
+                          </li>
+                          <li class="list-group-item">
+                            <a
+                              href="https://forms.gle/xtkZexnEuRVYfwAT6"
+                              target="_blank"
+                            >
+                              <b>
+                                Detailed Description of Dataset and Download
+                                links
+                              </b>
+                              <img
+                                style="vertical-align: sub"
+                                src="https://img.icons8.com/fluent-systems-filled/18/0275d8/external-link.png"
+                            /></a>
+                          </li>
+                        </ol>
+                      </div>
                     </div>
+                  </div>
                 </div>
+              </div>
             </div>
-            <div class=" card shadow py-2 dataset-gifs-div mb-5">
-                <h4 class="text-capitalize text-primary font-weight-bold text-xls mb-1 ml-3 mt-2">
-                    Sample videos from Dataset
-                </h4>
-                <hr style="height:1px; background-color:#efefef; width: 100%; text-align: center;"/>
-                <div class="row mb-3">
-                    <div class="gifs-row-1 col-lg-6 col-sm-12 mb-3">
-                        <img src="assets/img/website1.gif" width="90%">
-                    </div>
-                    <div class="gifs-row-1 col-lg-6 col-sm-12">
-                        <img src="assets/img/website2.gif" width="90%">
-                    </div>
+            <div class="card shadow py-2 dataset-gifs-div mb-5">
+              <h4
+                class="
+                  text-capitalize text-primary
+                  font-weight-bold
+                  text-xls
+                  mb-1
+                  ml-3
+                  mt-2
+                "
+              >
+                Sample videos from Dataset
+              </h4>
+              <hr
+                style="
+                  height: 1px;
+                  background-color: #efefef;
+                  width: 100%;
+                  text-align: center;
+                "
+              />
+              <div class="row mb-3">
+                <div class="gifs-row-1 col-lg-6 col-sm-12 mb-3">
+                  <img src="assets/img/website1.gif" width="90%" />
                 </div>
-                <div class="row">
-                    <div class="gifs-row-2 col-lg-6 col-sm-12 mb-3">
-                        <img src="assets/img/website3.gif" width="90%">
-                    </div>
-                    <div class="gifs-row-2 col-lg-6 col-sm-12">
-                        <img src="assets/img/website4.gif" width="90%">
-                    </div>
+                <div class="gifs-row-1 col-lg-6 col-sm-12">
+                  <img src="assets/img/website2.gif" width="90%" />
                 </div>
-                <div class="row m-2 ml-4">
-                    <p class="video-description">*We have compressed the videos for display on website as GIFs</p>
+              </div>
+              <div class="row">
+                <div class="gifs-row-2 col-lg-6 col-sm-12 mb-3">
+                  <img src="assets/img/website3.gif" width="90%" />
                 </div>
+                <div class="gifs-row-2 col-lg-6 col-sm-12">
+                  <img src="assets/img/website4.gif" width="90%" />
+                </div>
+              </div>
+              <div class="row m-2 ml-4">
+                <p class="video-description">
+                  *We have compressed the videos for display on website as GIFs
+                </p>
+              </div>
             </div>
 
             <div class="card shadow py-3 mb-5">
-                <h4 class="text-capitalize text-primary font-weight-bold text-xls mb-1 ml-3 mt-2">
-                    Sample Frames from Dataset
-                </h4>
-                <hr style="height:1px; background-color:#efefef; width: 100%; text-align: center;"/>
-                
-                <div class="frames-div px-3">
+              <h4
+                class="
+                  text-capitalize text-primary
+                  font-weight-bold
+                  text-xls
+                  mb-1
+                  ml-3
+                  mt-2
+                "
+              >
+                Sample Frames from Dataset
+              </h4>
+              <hr
+                style="
+                  height: 1px;
+                  background-color: #efefef;
+                  width: 100%;
+                  text-align: center;
+                "
+              />
+
+              <div class="frames-div px-3">
                 <div class="legend-div text-right">
-                    <span class="text-success mr-3"><i class="fas fa-square"></i> Safe frames</span> 
-                    <span class="text-danger"><i class="fas fa-square"></i> Unsafe Frames</span>
+                  <span class="text-success mr-3"
+                    ><i class="fas fa-square"></i> Safe frames</span
+                  >
+                  <span class="text-danger"
+                    ><i class="fas fa-square"></i> Unsafe Frames</span
+                  >
                 </div>
-                <br>
+                <br />
                 <div class="row mb-2 px-2">
-                    <div class="images-row col-lg-2 col-sm-4 col-4 mb-2">
-                        <img src="assets/img/safe_frames/1.png" data-action="zoom" class="img-fluid" style="border: 3px solid green;">
-                    </div>
-                    <div class="images-row col-lg-2 col-sm-4 col-4">
-                        <img src="assets/img/safe_frames/2.png" data-action="zoom" class="img-fluid" style="border: 3px solid green;">
-                    </div>
-                    <div class="images-row col-lg-2 col-sm-4 col-4">
-                        <img src="assets/img/safe_frames/3.png" data-action="zoom" class="img-fluid" style="border: 3px solid green;">
-                    </div>
-                    <div class="images-row col-lg-2 col-sm-4 col-4">
-                        <img src="assets/img/safe_frames/4.png" data-action="zoom" class="img-fluid" style="border: 3px solid green;">
-                    </div>
-                    <div class="images-row col-lg-2 col-sm-4 col-4">
-                        <img src="assets/img/safe_frames/5.png" data-action="zoom" class="img-fluid" style="border: 3px solid green;">
-                    </div>
-                    <div class="images-row col-lg-2 col-sm-4 col-4">
-                        <img src="assets/img/safe_frames/6.png" data-action="zoom" class="img-fluid" style="border: 3px solid green;">
-                    </div>                    
-                </div>
-                
-                <div class="row mb-2 px-2">
-                    <div class="images-row col-lg-2 col-sm-4 col-4 mb-2">
-                        <img src="assets/img/safe_frames/7.png" data-action="zoom" width="100%" style="border: 3px solid green;">
-                    </div>
-                    <div class="images-row col-lg-2 col-sm-4 col-4">
-                        <img src="assets/img/safe_frames/8.png" data-action="zoom" width="100%" style="border: 3px solid green;">
-                    </div>
-                    <div class="images-row col-lg-2 col-sm-4 col-4">
-                        <img src="assets/img/safe_frames/9.png" data-action="zoom" width="100%" style="border: 3px solid green;">
-                    </div>
-                    <div class="images-row col-lg-2 col-sm-4 col-4">
-                        <img src="assets/img/safe_frames/10.png" data-action="zoom" width="100%" style="border: 3px solid green;">
-                    </div>
-                    <div class="images-row col-lg-2 col-sm-4 col-4">
-                        <img src="assets/img/safe_frames/11.png" data-action="zoom" width="100%" style="border: 3px solid green;">
-                    </div>
-                    <div class="images-row col-lg-2 col-sm-4 col-4">
-                        <img src="assets/img/safe_frames/12.png" data-action="zoom" width="100%" style="border: 3px solid green;">
-                    </div>
-                    
-                </div>
-                
-                <div class="row mb-2 px-2">
-                    <div class="images-row col-lg-2 col-sm-4 col-4 mb-2">
-                        <img src="assets/img/safe_frames/13.png" data-action="zoom" width="100%" style="border: 3px solid green;">
-                    </div>
-                    <div class="images-row col-lg-2 col-sm-4 col-4">
-                        <img src="assets/img/safe_frames/14.png" data-action="zoom" width="100%" style="border: 3px solid green;">
-                    </div>
-                    <div class="images-row col-lg-2 col-sm-4 col-4">
-                        <img src="assets/img/safe_frames/15.png" data-action="zoom" width="100%" style="border: 3px solid green;">
-                    </div>
-                    <div class="images-row col-lg-2 col-sm-4 col-4">
-                        <img src="assets/img/safe_frames/16.png" data-action="zoom" width="100%" style="border: 3px solid green;">
-                    </div>
-                    <div class="images-row col-lg-2 col-sm-4 col-4">
-                        <img src="assets/img/safe_frames/17.png" data-action="zoom" width="100%" style="border: 3px solid green;">
-                    </div>
-                    <div class="images-row col-lg-2 col-sm-4 col-4">
-                        <img src="assets/img/safe_frames/18.png" data-action="zoom" width="100%" style="border: 3px solid green;">
-                    </div>                    
-                </div>
-                
-                <div class="row mb-2 px-2">
-                    <div class="images-row col-lg-2 col-sm-4 col-4 mb-2">
-                        <img src="assets/img/safe_frames/9.png" data-action="zoom" width="100%" style="border: 3px solid green;">
-                    </div>
-                    <div class="images-row col-lg-2 col-sm-4 col-4">
-                        <img src="assets/img/safe_frames/20.png" data-action="zoom" width="100%" style="border: 3px solid green;">
-                    </div>
-                    <div class="images-row col-lg-2 col-sm-4 col-4">
-                        <img src="assets/img/safe_frames/21.png" data-action="zoom" width="100%" style="border: 3px solid green;">
-                    </div>
-                    <div class="images-row col-lg-2 col-sm-4 col-4">
-                        <img src="assets/img/safe_frames/22.png" data-action="zoom" width="100%" style="border: 3px solid green;">
-                    </div>
-                    <div class="images-row col-lg-2 col-sm-4 col-4">
-                        <img src="assets/img/safe_frames/23.png" data-action="zoom" width="100%" style="border: 3px solid green;">
-                    </div>
-                    <div class="images-row col-lg-2 col-sm-4 col-4">
-                        <img src="assets/img/safe_frames/24.png" data-action="zoom" width="100%" style="border: 3px solid green;">
-                    </div>                    
-                </div>
-                
-                <div class="row mb-2 px-2">
-                    <div class="images-row col-lg-2 col-sm-4 col-4 mb-2">
-                        <img src="assets/img/unsafe_frames/1.png" data-action="zoom" width="100%" style="border: 3px solid red;">
-                    </div>
-                    <div class="images-row col-lg-2 col-sm-4 col-4">
-                        <img src="assets/img/unsafe_frames/2.png" data-action="zoom" width="100%" style="border: 3px solid red;">
-                    </div>
-                    <div class="images-row col-lg-2 col-sm-4 col-4">
-                        <img src="assets/img/unsafe_frames/3.png" data-action="zoom" width="100%" style="border: 3px solid red;">
-                    </div>
-                    <div class="images-row col-lg-2 col-sm-4 col-4">
-                        <img src="assets/img/unsafe_frames/4.png" data-action="zoom" width="100%" style="border: 3px solid red;">
-                    </div>
-                    <div class="images-row col-lg-2 col-sm-4 col-4">
-                        <img src="assets/img/unsafe_frames/5.png" data-action="zoom" width="100%" style="border: 3px solid red;">
-                    </div>
-                    <div class="images-row col-lg-2 col-sm-4 col-4">
-                        <img src="assets/img/unsafe_frames/6.png" data-action="zoom" width="100%" style="border: 3px solid red;">
-                    </div>                    
-                </div>
-                
-                <div class="row mb-2 px-2">
-                    <div class="images-row col-lg-2 col-sm-4 col-4 mb-2">
-                        <img src="assets/img/unsafe_frames/7.png" data-action="zoom" width="100%" style="border: 3px solid red;">
-                    </div>
-                    <div class="images-row col-lg-2 col-sm-4 col-4">
-                        <img src="assets/img/unsafe_frames/8.png" data-action="zoom" width="100%" style="border: 3px solid red;">
-                    </div>
-                    <div class="images-row col-lg-2 col-sm-4 col-4">
-                        <img src="assets/img/unsafe_frames/9.png" data-action="zoom" width="100%" style="border: 3px solid red;">
-                    </div>
-                    <div class="images-row col-lg-2 col-sm-4 col-4">
-                        <img src="assets/img/unsafe_frames/10.png" data-action="zoom" width="100%" style="border: 3px solid red;">
-                    </div>
-                    <div class="images-row col-lg-2 col-sm-4 col-4">
-                        <img src="assets/img/unsafe_frames/11.png" data-action="zoom" width="100%" style="border: 3px solid red;">
-                    </div>
-                    <div class="images-row col-lg-2 col-sm-4 col-4">
-                        <img src="assets/img/unsafe_frames/12.png" data-action="zoom" width="100%" style="border: 3px solid red;">
-                    </div> 
-                </div>
-                
-                <div class="row mb-2 px-2">
-                    <div class="images-row col-lg-2 col-sm-4 col-4 mb-2">
-                        <img src="assets/img/unsafe_frames/13.png" data-action="zoom" width="100%" style="border: 3px solid red;">
-                    </div>
-                    <div class="images-row col-lg-2 col-sm-4 col-4">
-                        <img src="assets/img/unsafe_frames/14.png" data-action="zoom" width="100%" style="border: 3px solid red;">
-                    </div>
-                    <div class="images-row col-lg-2 col-sm-4 col-4">
-                        <img src="assets/img/unsafe_frames/15.png" data-action="zoom" width="100%" style="border: 3px solid red;">
-                    </div>
-                    <div class="images-row col-lg-2 col-sm-4 col-4">
-                        <img src="assets/img/unsafe_frames/16.png" data-action="zoom" width="100%" style="border: 3px solid red;">
-                    </div>
-                    <div class="images-row col-lg-2 col-sm-4 col-4">
-                        <img src="assets/img/unsafe_frames/17.png" data-action="zoom" width="100%" style="border: 3px solid red;">
-                    </div>
-                    <div class="images-row col-lg-2 col-sm-4 col-4">
-                        <img src="assets/img/unsafe_frames/18.png" data-action="zoom" width="100%" style="border: 3px solid red;">
-                    </div>
+                  <div class="images-row col-lg-2 col-sm-4 col-4 mb-2">
+                    <img
+                      src="assets/img/safe_frames/1.png"
+                      data-action="zoom"
+                      class="img-fluid"
+                      style="border: 3px solid green"
+                    />
+                  </div>
+                  <div class="images-row col-lg-2 col-sm-4 col-4">
+                    <img
+                      src="assets/img/safe_frames/2.png"
+                      data-action="zoom"
+                      class="img-fluid"
+                      style="border: 3px solid green"
+                    />
+                  </div>
+                  <div class="images-row col-lg-2 col-sm-4 col-4">
+                    <img
+                      src="assets/img/safe_frames/3.png"
+                      data-action="zoom"
+                      class="img-fluid"
+                      style="border: 3px solid green"
+                    />
+                  </div>
+                  <div class="images-row col-lg-2 col-sm-4 col-4">
+                    <img
+                      src="assets/img/safe_frames/4.png"
+                      data-action="zoom"
+                      class="img-fluid"
+                      style="border: 3px solid green"
+                    />
+                  </div>
+                  <div class="images-row col-lg-2 col-sm-4 col-4">
+                    <img
+                      src="assets/img/safe_frames/5.png"
+                      data-action="zoom"
+                      class="img-fluid"
+                      style="border: 3px solid green"
+                    />
+                  </div>
+                  <div class="images-row col-lg-2 col-sm-4 col-4">
+                    <img
+                      src="assets/img/safe_frames/6.png"
+                      data-action="zoom"
+                      class="img-fluid"
+                      style="border: 3px solid green"
+                    />
+                  </div>
                 </div>
 
                 <div class="row mb-2 px-2">
-                    <div class="images-row col-lg-2 col-sm-4 col-4 mb-2">
-                        <img src="assets/img/unsafe_frames/19.png" data-action="zoom" width="100%" style="border: 3px solid red;">
-                    </div>
-                    <div class="images-row col-lg-2 col-sm-4 col-4">
-                        <img src="assets/img/unsafe_frames/20.png" data-action="zoom" width="100%" style="border: 3px solid red;">
-                    </div>
-                    <div class="images-row col-lg-2 col-sm-4 col-4">
-                        <img src="assets/img/unsafe_frames/21.png" data-action="zoom" width="100%" style="border: 3px solid red;">
-                    </div>
-                    <div class="images-row col-lg-2 col-sm-4 col-4">
-                        <img src="assets/img/unsafe_frames/22.png" data-action="zoom" width="100%" style="border: 3px solid red;">
-                    </div>
-                    <div class="images-row col-lg-2 col-sm-4 col-4">
-                        <img src="assets/img/unsafe_frames/23.png" data-action="zoom" width="100%" style="border: 3px solid red;">
-                    </div>
-                    <div class="images-row col-lg-2 col-sm-4 col-4">
-                        <img src="assets/img/unsafe_frames/24.png" data-action="zoom" width="100%" style="border: 3px solid red;">
-                    </div>
+                  <div class="images-row col-lg-2 col-sm-4 col-4 mb-2">
+                    <img
+                      src="assets/img/safe_frames/7.png"
+                      data-action="zoom"
+                      width="100%"
+                      style="border: 3px solid green"
+                    />
+                  </div>
+                  <div class="images-row col-lg-2 col-sm-4 col-4">
+                    <img
+                      src="assets/img/safe_frames/8.png"
+                      data-action="zoom"
+                      width="100%"
+                      style="border: 3px solid green"
+                    />
+                  </div>
+                  <div class="images-row col-lg-2 col-sm-4 col-4">
+                    <img
+                      src="assets/img/safe_frames/9.png"
+                      data-action="zoom"
+                      width="100%"
+                      style="border: 3px solid green"
+                    />
+                  </div>
+                  <div class="images-row col-lg-2 col-sm-4 col-4">
+                    <img
+                      src="assets/img/safe_frames/10.png"
+                      data-action="zoom"
+                      width="100%"
+                      style="border: 3px solid green"
+                    />
+                  </div>
+                  <div class="images-row col-lg-2 col-sm-4 col-4">
+                    <img
+                      src="assets/img/safe_frames/11.png"
+                      data-action="zoom"
+                      width="100%"
+                      style="border: 3px solid green"
+                    />
+                  </div>
+                  <div class="images-row col-lg-2 col-sm-4 col-4">
+                    <img
+                      src="assets/img/safe_frames/12.png"
+                      data-action="zoom"
+                      width="100%"
+                      style="border: 3px solid green"
+                    />
+                  </div>
                 </div>
-               
-            </div>
-            <!-- <div class=" card shadow py-2 table-description-div mb-5">
+
+                <div class="row mb-2 px-2">
+                  <div class="images-row col-lg-2 col-sm-4 col-4 mb-2">
+                    <img
+                      src="assets/img/safe_frames/13.png"
+                      data-action="zoom"
+                      width="100%"
+                      style="border: 3px solid green"
+                    />
+                  </div>
+                  <div class="images-row col-lg-2 col-sm-4 col-4">
+                    <img
+                      src="assets/img/safe_frames/14.png"
+                      data-action="zoom"
+                      width="100%"
+                      style="border: 3px solid green"
+                    />
+                  </div>
+                  <div class="images-row col-lg-2 col-sm-4 col-4">
+                    <img
+                      src="assets/img/safe_frames/15.png"
+                      data-action="zoom"
+                      width="100%"
+                      style="border: 3px solid green"
+                    />
+                  </div>
+                  <div class="images-row col-lg-2 col-sm-4 col-4">
+                    <img
+                      src="assets/img/safe_frames/16.png"
+                      data-action="zoom"
+                      width="100%"
+                      style="border: 3px solid green"
+                    />
+                  </div>
+                  <div class="images-row col-lg-2 col-sm-4 col-4">
+                    <img
+                      src="assets/img/safe_frames/17.png"
+                      data-action="zoom"
+                      width="100%"
+                      style="border: 3px solid green"
+                    />
+                  </div>
+                  <div class="images-row col-lg-2 col-sm-4 col-4">
+                    <img
+                      src="assets/img/safe_frames/18.png"
+                      data-action="zoom"
+                      width="100%"
+                      style="border: 3px solid green"
+                    />
+                  </div>
+                </div>
+
+                <div class="row mb-2 px-2">
+                  <div class="images-row col-lg-2 col-sm-4 col-4 mb-2">
+                    <img
+                      src="assets/img/safe_frames/9.png"
+                      data-action="zoom"
+                      width="100%"
+                      style="border: 3px solid green"
+                    />
+                  </div>
+                  <div class="images-row col-lg-2 col-sm-4 col-4">
+                    <img
+                      src="assets/img/safe_frames/20.png"
+                      data-action="zoom"
+                      width="100%"
+                      style="border: 3px solid green"
+                    />
+                  </div>
+                  <div class="images-row col-lg-2 col-sm-4 col-4">
+                    <img
+                      src="assets/img/safe_frames/21.png"
+                      data-action="zoom"
+                      width="100%"
+                      style="border: 3px solid green"
+                    />
+                  </div>
+                  <div class="images-row col-lg-2 col-sm-4 col-4">
+                    <img
+                      src="assets/img/safe_frames/22.png"
+                      data-action="zoom"
+                      width="100%"
+                      style="border: 3px solid green"
+                    />
+                  </div>
+                  <div class="images-row col-lg-2 col-sm-4 col-4">
+                    <img
+                      src="assets/img/safe_frames/23.png"
+                      data-action="zoom"
+                      width="100%"
+                      style="border: 3px solid green"
+                    />
+                  </div>
+                  <div class="images-row col-lg-2 col-sm-4 col-4">
+                    <img
+                      src="assets/img/safe_frames/24.png"
+                      data-action="zoom"
+                      width="100%"
+                      style="border: 3px solid green"
+                    />
+                  </div>
+                </div>
+
+                <div class="row mb-2 px-2">
+                  <div class="images-row col-lg-2 col-sm-4 col-4 mb-2">
+                    <img
+                      src="assets/img/unsafe_frames/1.png"
+                      data-action="zoom"
+                      width="100%"
+                      style="border: 3px solid red"
+                    />
+                  </div>
+                  <div class="images-row col-lg-2 col-sm-4 col-4">
+                    <img
+                      src="assets/img/unsafe_frames/2.png"
+                      data-action="zoom"
+                      width="100%"
+                      style="border: 3px solid red"
+                    />
+                  </div>
+                  <div class="images-row col-lg-2 col-sm-4 col-4">
+                    <img
+                      src="assets/img/unsafe_frames/3.png"
+                      data-action="zoom"
+                      width="100%"
+                      style="border: 3px solid red"
+                    />
+                  </div>
+                  <div class="images-row col-lg-2 col-sm-4 col-4">
+                    <img
+                      src="assets/img/unsafe_frames/4.png"
+                      data-action="zoom"
+                      width="100%"
+                      style="border: 3px solid red"
+                    />
+                  </div>
+                  <div class="images-row col-lg-2 col-sm-4 col-4">
+                    <img
+                      src="assets/img/unsafe_frames/5.png"
+                      data-action="zoom"
+                      width="100%"
+                      style="border: 3px solid red"
+                    />
+                  </div>
+                  <div class="images-row col-lg-2 col-sm-4 col-4">
+                    <img
+                      src="assets/img/unsafe_frames/6.png"
+                      data-action="zoom"
+                      width="100%"
+                      style="border: 3px solid red"
+                    />
+                  </div>
+                </div>
+
+                <div class="row mb-2 px-2">
+                  <div class="images-row col-lg-2 col-sm-4 col-4 mb-2">
+                    <img
+                      src="assets/img/unsafe_frames/7.png"
+                      data-action="zoom"
+                      width="100%"
+                      style="border: 3px solid red"
+                    />
+                  </div>
+                  <div class="images-row col-lg-2 col-sm-4 col-4">
+                    <img
+                      src="assets/img/unsafe_frames/8.png"
+                      data-action="zoom"
+                      width="100%"
+                      style="border: 3px solid red"
+                    />
+                  </div>
+                  <div class="images-row col-lg-2 col-sm-4 col-4">
+                    <img
+                      src="assets/img/unsafe_frames/9.png"
+                      data-action="zoom"
+                      width="100%"
+                      style="border: 3px solid red"
+                    />
+                  </div>
+                  <div class="images-row col-lg-2 col-sm-4 col-4">
+                    <img
+                      src="assets/img/unsafe_frames/10.png"
+                      data-action="zoom"
+                      width="100%"
+                      style="border: 3px solid red"
+                    />
+                  </div>
+                  <div class="images-row col-lg-2 col-sm-4 col-4">
+                    <img
+                      src="assets/img/unsafe_frames/11.png"
+                      data-action="zoom"
+                      width="100%"
+                      style="border: 3px solid red"
+                    />
+                  </div>
+                  <div class="images-row col-lg-2 col-sm-4 col-4">
+                    <img
+                      src="assets/img/unsafe_frames/12.png"
+                      data-action="zoom"
+                      width="100%"
+                      style="border: 3px solid red"
+                    />
+                  </div>
+                </div>
+
+                <div class="row mb-2 px-2">
+                  <div class="images-row col-lg-2 col-sm-4 col-4 mb-2">
+                    <img
+                      src="assets/img/unsafe_frames/13.png"
+                      data-action="zoom"
+                      width="100%"
+                      style="border: 3px solid red"
+                    />
+                  </div>
+                  <div class="images-row col-lg-2 col-sm-4 col-4">
+                    <img
+                      src="assets/img/unsafe_frames/14.png"
+                      data-action="zoom"
+                      width="100%"
+                      style="border: 3px solid red"
+                    />
+                  </div>
+                  <div class="images-row col-lg-2 col-sm-4 col-4">
+                    <img
+                      src="assets/img/unsafe_frames/15.png"
+                      data-action="zoom"
+                      width="100%"
+                      style="border: 3px solid red"
+                    />
+                  </div>
+                  <div class="images-row col-lg-2 col-sm-4 col-4">
+                    <img
+                      src="assets/img/unsafe_frames/16.png"
+                      data-action="zoom"
+                      width="100%"
+                      style="border: 3px solid red"
+                    />
+                  </div>
+                  <div class="images-row col-lg-2 col-sm-4 col-4">
+                    <img
+                      src="assets/img/unsafe_frames/17.png"
+                      data-action="zoom"
+                      width="100%"
+                      style="border: 3px solid red"
+                    />
+                  </div>
+                  <div class="images-row col-lg-2 col-sm-4 col-4">
+                    <img
+                      src="assets/img/unsafe_frames/18.png"
+                      data-action="zoom"
+                      width="100%"
+                      style="border: 3px solid red"
+                    />
+                  </div>
+                </div>
+
+                <div class="row mb-2 px-2">
+                  <div class="images-row col-lg-2 col-sm-4 col-4 mb-2">
+                    <img
+                      src="assets/img/unsafe_frames/19.png"
+                      data-action="zoom"
+                      width="100%"
+                      style="border: 3px solid red"
+                    />
+                  </div>
+                  <div class="images-row col-lg-2 col-sm-4 col-4">
+                    <img
+                      src="assets/img/unsafe_frames/20.png"
+                      data-action="zoom"
+                      width="100%"
+                      style="border: 3px solid red"
+                    />
+                  </div>
+                  <div class="images-row col-lg-2 col-sm-4 col-4">
+                    <img
+                      src="assets/img/unsafe_frames/21.png"
+                      data-action="zoom"
+                      width="100%"
+                      style="border: 3px solid red"
+                    />
+                  </div>
+                  <div class="images-row col-lg-2 col-sm-4 col-4">
+                    <img
+                      src="assets/img/unsafe_frames/22.png"
+                      data-action="zoom"
+                      width="100%"
+                      style="border: 3px solid red"
+                    />
+                  </div>
+                  <div class="images-row col-lg-2 col-sm-4 col-4">
+                    <img
+                      src="assets/img/unsafe_frames/23.png"
+                      data-action="zoom"
+                      width="100%"
+                      style="border: 3px solid red"
+                    />
+                  </div>
+                  <div class="images-row col-lg-2 col-sm-4 col-4">
+                    <img
+                      src="assets/img/unsafe_frames/24.png"
+                      data-action="zoom"
+                      width="100%"
+                      style="border: 3px solid red"
+                    />
+                  </div>
+                </div>
+              </div>
+              <!-- <div class=" card shadow py-2 table-description-div mb-5">
                 <h4 class="text-primary font-weight-bold text-xls mb-1 ml-3 mt-2">
                     Sample rows from labels.csv
                 </h4>
@@ -335,18 +735,23 @@
                     </div>
                 </div>
             </div> -->
-    </div>
-    </div>
-    <footer class="bg-white sticky-footer shadow">
-        <div class="container my-auto">
-            <div class="text-center my-auto copyright">
-                <span>Copyright © Siddhi Brahmbhatt | Yagnesh Patil</span>
             </div>
+          </div>
+          <footer class="bg-white sticky-footer shadow">
+            <div class="container my-auto">
+              <div class="text-center my-auto copyright">
+                <span>Copyright © Siddhi Brahmbhatt | Yagnesh Patil</span>
+              </div>
+            </div>
+          </footer>
         </div>
-    </footer> 
+      </div>
+      <div>
+        <a class="border rounded-circle d-inline scroll-to-top" href="#page-top"
+          ><i class="fas fa-arrow-up"></i
+        ></a>
+      </div>
     </div>
-    </div>
-    <div><a class="border rounded-circle d-inline scroll-to-top" href="#page-top"><i class="fas fa-arrow-up"></i></a></div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script>
@@ -354,11 +759,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>
     <script src="assets/js/theme.js"></script>
     <script>
-        $( document ).ready(function() {
-            if ($(window).width() < 768) {
-                $(".sidebar").toggleClass("toggled");
-            }
-        });
+      $(document).ready(function () {
+        if ($(window).width() < 768) {
+          $(".sidebar").toggleClass("toggled");
+        }
+      });
     </script>
-</body>
+  </body>
 </html>

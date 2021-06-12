@@ -35,6 +35,10 @@ body {
   font-size: 1rem;
 }
 
+.approach-menu {
+  min-width: 12rem;
+}
+
 .approach-item {
   font-size: 1rem;
 }

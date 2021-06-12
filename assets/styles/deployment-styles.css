@@ -1,8 +1,21 @@
+figcaption {
+  font-size: smaller;
+  color: rgb(0, 0, 0);
+  font-style: italic;
+  padding: 3px;
+  text-align: center;
+}
 
-  figcaption {
-    font-size: smaller;
-    color: rgb(0, 0, 0);
-    font-style: italic;
-    padding: 3px;
-    text-align: center;
+.hardware-devices-div {
+  border: 1px solid #e1e1e1;
+}
+
+.jetson-setup-img {
+  width: 50%;
+}
+
+@media (max-width: 767px) {
+  .jetson-setup-img {
+    width: 100%;
   }
+}

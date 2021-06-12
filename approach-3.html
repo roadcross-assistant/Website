@@ -221,47 +221,112 @@
                           </h4>
                         </div>
                         <hr style="height: 1px; background-color: #efefef" />
-                        Approach 3.1 consists of
-                        <strong>MobileNetv2 model</strong> - which is used
-                        widely to run on small and low configuration based
-                        devices such as mobile and in this project - on Nvidia
-                        Jetson Nano (More about it on
-                        <a href="deployment.html"> Deployment page). </a>
-                        <br /><br />
+                        <p style="text-align: justify;">
+                        In Approach 3.1, we used the MobileNetV2 architecture with additional dense layers at the top. 
+                        We used <strong> MobileNetV2</strong> because it is a lightweight architecture particularly useful for mobile and 
+                        embedded vision applications. Python implementation for the same can be found 
+                        <a href="https://github.com/roadcross-assistant/Project/blob/master/DL/Approach_3.1.py"> <u> here</u></a>.
+                        </p>
+                        
+                        
                         <div class="text-center">
                           <img
-                            src="assets/img/custom_mobilenet.png"
+                            src="assets/img/approach_3.1.png" width=80% 
                             class="img-fluid"
                           />
                         </div>
-                        <br />
-                        <div class="h6 mb-0">
-                          <span>
-                            So in this pre-trained model, to specify the
-                            <strong>
-                              custom input image shape [270,480]
-                            </strong>
-                            for this project, We have added new additional
-                            layers to build a custom MobileNetV2 architecture
-                            and train it on our training video dataset, in
-                            addition to applying testing and validation sets in
-                            model architecture training process. The python
-                            script for this architecture is available
-                            <a
-                              href="#link_to_custom_mobilenet_model"
-                              target="_blank"
-                            >
-                              <u>here</u>.</a
-                            >
-                          </span>
+                        <br>
+                        
+                        <div class="text-primary font-weight-bold text-xls mb-1 h5">
+                          <span>Model training</span>
                         </div>
-                        <br />
-                        <div
-                          class="text-primary font-weight-bold text-xls mb-1 h5"
-                        >
+                        <br>
+                        <ul>
+                          <li>We trained the model for <strong>150 epochs</strong> , saving checkpoint for the best value of 
+                            <i>precision@90recall</i>.
+                          </li> 
+                          <li>
+                            Loss function used: <strong>BinaryCrossentropy</strong>. We also assigned class weights <i>(unsafe: 1 , safe:2)</i>  while 
+                            training as our dataset is imbalanced.
+                          </li>
+                          <li>
+                            Optimizer used: <strong>Adam optimizer</strong>.
+                          </li>
+                        </ul>
+
+                        <div class="text-primary font-weight-bold text-xls mb-1 h5">
                           <span>Model performance</span>
                         </div>
-                        accuracy, speed and overfitting issues
+                        <br>
+                        <ul>
+                          <li>
+                            Precision : <strong>0.90</strong>, Recall : <strong>0.99</strong>, Binary accuracy: <strong>0.99</strong> (on train data)
+                           </li>
+                         <li>
+                          Precision : <strong>0.90</strong>, Recall : <strong>0.60</strong>, Binary accuracy: <strong>0.85</strong> (on test data)
+                         </li>
+                         <li>
+                           Throughput on Jetson Nano after conversion into TensorRT graph: <strong>15 fps</strong>.
+                         </li>
+                        </ul>
+
+                        <div class="text-primary font-weight-bold text-xls mb-1 h5">
+                          <span>Sample Prediction Outputs (to be changed)</span>
+                        </div>
+
+                        <br />
+                        <div class="row">
+                          <div class="images-row col-lg-4 col-sm-12">
+                            <img
+                              src="assets/img/approach_1.1_frames/tp1.jpg"
+                              width="100%"
+                            />
+                            <figcaption>True Positive</figcaption>
+                            <br />
+                          </div>
+                          <div class="images-row col-lg-4 col-sm-12">
+                            <img
+                              src="assets/img/approach_1.1_frames/tp2.jpg"
+                              width="100%"
+                            />
+                            <figcaption>True Positive</figcaption>
+                            <br />
+                          </div>
+                          <div class="images-row col-lg-4 col-sm-12">
+                            <img
+                              src="assets/img/approach_1.1_frames/tn1.jpg"
+                              width="100%"
+                            />
+                            <figcaption>True Negative</figcaption>
+                            <br />
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="images-row col-lg-4 col-sm-12">
+                            <img
+                              src="assets/img/approach_1.1_frames/fp1.jpg"
+                              width="100%"
+                            />
+                            <figcaption>False Positive</figcaption>
+                            <br />
+                          </div>
+                          <div class="images-row col-lg-4 col-sm-12">
+                            <img
+                              src="assets/img/approach_1.1_frames/fp2.jpg"
+                              width="100%"
+                            />
+                            <figcaption>False Positive</figcaption>
+                            <br />
+                          </div>
+                          <div class="images-row col-lg-4 col-sm-12">
+                            <img
+                              src="assets/img/approach_1.1_frames/fn1.jpg"
+                              width="100%"
+                            />
+                            <figcaption>False Negative</figcaption>
+                            <br />
+                          </div>
+
                       </div>
                     </div>
                   </div>

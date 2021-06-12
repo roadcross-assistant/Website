@@ -135,27 +135,76 @@
           <div class="container-fluid">
             <div class="work-in-progress-div text-center">
               <h1 style="color: #5a5c69; font-size: 2em; font-weight: 500">
-                Approach 3: Deep Learning based approach
+                Single Frame CNN
               </h1>
-              <br />
+              <br>
+              <p style="text-align: justify;">
+                Deep Learning has been shown to learn highly effective features from image and video data, yielding high accuracy in many 
+              tasks. We have performed many training experiments on AWS g4dn.xlarge instance (with Tesla T4 GPU) in this phase. The data 
+              preparation and CNN architecture details are as given below.
+              </p>
+    
             </div>
+
             <div class="row">
               <div class="col-md-12 col-xl-12 mb-4">
                 <div class="card shadow mb-4">
                   <div class="card-body">
-                    Deep Learning approach has proven its significance from past
-                    2 decades that it can perform very well without disclosing
-                    any complexities and not requiring any special kind of
-                    internmediate training phases which need any human
-                    interations. <br />
-                    So, we went further with implementing DL based approaches.
-                    For that, we have divided out dataset in such manner:
 
-                    <ol>
-                      <li>Training Dataset - 74 videos</li>
-                      <li>validation Dataset - 15 videos</li>
-                      <li>Testing Dataset - 15 videos</li>
-                    </ol>
+                    <div class="row align-items-center no-gutters">
+                      <div class="col mr-1">
+                        <div class="approach-heading-div">
+                          <h4
+                            class="
+                              text-capitalize text-primary
+                              font-weight-bold
+                              text-xls
+                              my-2
+                            "
+                          >
+                            <a id="approach3.1">DATA PREPARATION </a>
+                          </h4>
+                        </div>
+
+                        <hr style="height: 1px; background-color: #efefef" />
+
+                        <b>Train-test-validation split:</b> <br><br>
+                        We have used 66 videos for training, 22 for testing and 16 for validation.
+                        <br>
+                        <br>
+
+                        <b>Data pipeline (Using Dataset API of tensorflow):</b> <br><br>
+                        Firstly, we created a list of filenames to jpg images (for this, we stored all individual frames of the videos in
+                        a separate folder) and a corresponding list of labels.  
+                        We applied following steps to create the input pipeline for our model:
+                        <br><br>
+                        <ol>
+                          <li>Created dataset from slices of the filenames and labels</li>
+                          <li>Shuffled the data with a buffer size equal to the length of the dataset. This ensures good shuffling.</li>
+                          <li>Parsed the images from filename to the pixel values. We used multiple threads to improve the speed of 
+                            preprocessing.</li>
+                          <li>Applied data augmentation for the images. For data augmentation, we used random brigtness, contrast and
+                            saturation to the images. Also, we used multiple threads to improve the speed of preprocessing</li>
+                          <li>Batched the images (batch size = 16).</li>
+                          <li>Prefetched one batch to make sure that a batch is ready to be served at all time.</li>
+                        </ol>
+                        <br>
+                        Reference used : <cite><a href="https://cs230.stanford.edu/blog/datapipeline/" target="_blank">
+                          https://cs230.stanford.edu/blog/datapipeline/</a> 
+                          </cite>
+                        
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-12 col-xl-12 mb-4">
+                <div class="card shadow mb-4">
+                  <div class="card-body">
 
                     <div class="row align-items-center no-gutters">
                       <div class="col mr-1">

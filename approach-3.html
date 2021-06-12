@@ -318,7 +318,7 @@
                           </li>
                         </ul>
 
-                        <div
+                        <!-- <div
                           class="text-primary font-weight-bold text-xls mb-1 h5"
                         >
                           <span>Sample Prediction Outputs (to be changed)</span>
@@ -376,7 +376,8 @@
                             <figcaption>False Negative</figcaption>
                             <br />
                           </div>
-                        </div>
+                        </div> -->
+
                       </div>
                     </div>
                   </div>
@@ -441,6 +442,15 @@
                           <li>
                             Optimizer used: <strong>Adam optimizer</strong> with learning rate equal to 0.0002.
                           </li>
+                          <li>
+                            Python
+                          implementation for the same can be found
+                          <a
+                            href="https://github.com/roadcross-assistant/Project/blob/master/DL/Approach_3.2.py"
+                          >
+                            <u> here</u></a
+                          >.
+                          </li>
                         </ul>
 
                         <div
@@ -469,7 +479,7 @@
                           </li>
                         </ul>
 
-                        <div
+                        <!-- <div
                           class="text-primary font-weight-bold text-xls mb-1 h5"
                         >
                           <span>Sample Prediction Outputs (to be changed)</span>
@@ -527,7 +537,8 @@
                             <figcaption>False Negative</figcaption>
                             <br />
                           </div>
-                        </div>
+                        </div> -->
+
                       </div>
                     </div>
                   </div>
@@ -556,22 +567,15 @@
                         </div>
                         <hr style="height: 1px; background-color: #efefef" />
                         <p style="text-align: justify">
-                          In Approach 3.1, we used the <strong> MobileNetV2</strong> architecture
-                          with additional dense layers at the top. We used
-                          MobileNetV2 because it is a
-                          lightweight architecture particularly useful for
-                          mobile and embedded vision applications. Python
-                          implementation for the same can be found
-                          <a
-                            href="https://github.com/roadcross-assistant/Project/blob/master/DL/Approach_3.1.py"
-                          >
-                            <u> here</u></a
-                          >.
+                          It is an advancement over approach 3.2. Since convolutional layers with larger kernel size were not 
+                          optimized by TensorRT engine, we reduced the kernel size and added dialtion to those layers to compensate for
+                          the lowering of receptive field. This resulted in a higher inference speed after optimization to TensorRT graph.
+                          
                         </p>
 
                         <div class="text-center">
                           <img
-                            src="assets/img/approach_3.1.png"
+                            src="assets/img/approach_3.3.png"
                             width="80%"
                             class="img-fluid"
                           />
@@ -600,6 +604,15 @@
                           <li>
                             Optimizer used: <strong>Adam optimizer</strong>.
                           </li>
+                          <li>
+                            Python
+                          implementation for the same can be found
+                          <a
+                            href="https://github.com/roadcross-assistant/Project/blob/master/DL/Approach_3.3.py"
+                          >
+                            <u> here</u></a
+                          >.
+                          </li>
                         </ul>
 
                         <div
@@ -612,26 +625,31 @@
                           <li>
                             Precision : <strong>0.90</strong>, Recall :
                             <strong>0.99</strong>, Binary accuracy:
-                            <strong>0.99</strong> (on train data)
+                            <strong>0.97</strong> (on train data)
                           </li>
                           <li>
                             Precision : <strong>0.90</strong>, Recall :
-                            <strong>0.60</strong>, Binary accuracy:
-                            <strong>0.85</strong> (on test data)
+                            <strong>0.79</strong>, Binary accuracy:
+                            <strong>0.84</strong> (on test data)
                           </li>
                           <li>
                             Throughput on Jetson Nano after conversion into
-                            TensorRT graph: <strong>15 fps</strong>.
+                            TensorRT graph: <strong>8 fps</strong>.
+                          </li>
+                          <li>
+                            Since this model gives a decent enough recall value of 0.79 at a high precision of 0.90 along with a 
+                            good inference speed, we have deployed this model on Jetson Nano for building a real time and portable
+                            road crossing assistant.
                           </li>
                         </ul>
 
-                        <div
+                        <!-- <div
                           class="text-primary font-weight-bold text-xls mb-1 h5"
                         >
                           <span>Sample Prediction Outputs (to be changed)</span>
-                        </div>
+                        </div> -->
 
-                        <br />
+                        <!-- <br />
                         <div class="row">
                           <div class="images-row col-lg-4 col-sm-12">
                             <img
@@ -683,7 +701,8 @@
                             <figcaption>False Negative</figcaption>
                             <br />
                           </div>
-                        </div>
+                        </div> -->
+
                       </div>
                     </div>
                   </div>

@@ -139,9 +139,10 @@
                     <div class="row align-items-center no-gutters">
                       <div class="col mx-2">
                         <h4 class="text-primary font-weight-bold mb-2">
-                          Abstract/Introduction
+                          Introduction
                         </h4>
                         <div class="h5 mb-0">
+                          
                           <span
                             >Roads in medium-sized Indian towns often have lots
                             of traffic but no (or disregarded) traffic stops.
@@ -154,16 +155,14 @@
                             point of view), so we have created our own dataset.
                             Our dataset consists of 104 videos (>26K frames)
                             capturing various traffic patterns of Anand, Gujarat
-                            with a head-mounted camera. We have also annotated
+                            using a head-mounted camera. We have also annotated
                             all videos with timestamps for durations safe for
-                            crossing. We have achieved a testing accuracy of 86%
-                            by training a SVM on multi- frame features.
-                            Currently we are working to further improve accuracy
-                            through deep learning. After getting a prediction
-                            model with good enough accuracy, we will integrate
-                            it into a wearable assistant, which is intended to
-                            be worn by people who are blind or suffer from
-                            degraded vision, to help them cross busy
+                            crossing roads. Using a self-developed CNN architecture, we have 
+                            achieved a recall of 0.79 at precision of 0.90 on the 
+                            test data. By deploying our pretrained model on Nvidia Jetson
+                            Nano, we have developed a portable road crossing assistant
+                            which is intended to be worn by people who are blind or 
+                            suffer from degraded vision, to help them cross busy
                             roads.</span
                           >
                         </div>

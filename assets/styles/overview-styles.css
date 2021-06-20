@@ -137,6 +137,7 @@ p {
   text-align: center;
 }
 
+
 .approach-card {
   min-height: 90%;
   border: 1px solid #cfcfcf;
@@ -160,6 +161,13 @@ p {
   background-color: #27ae60;
 }
 
+.approach-title
+{ 
+  /* font-size: 1.2em; */
+  font-weight: 500;
+}
+
 .accuracy-p {
-  font-weight: 700;
+  font-weight: 550;
+  font-style: italic;
 }

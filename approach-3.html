@@ -278,7 +278,7 @@
                             Loss function used:
                             <strong>BinaryCrossentropy</strong>. We also
                             assigned class weights
-                            <i>(unsafe: 1 , safe:2)</i> while training as our
+                            <i>(unsafe: 1 , safe:1.92)</i> while training as our
                             dataset is imbalanced.
                           </li>
                           <li>
@@ -429,14 +429,14 @@
                         <ul>
                           <li>
                             We trained the model for
-                            <strong>100 epochs</strong> , saving checkpoint for
+                            <strong>150 epochs</strong> , saving checkpoint for
                             the best value of <i>precision@90recall</i>.
                           </li>
                           <li>
                             Loss function used:
                             <strong>BinaryCrossentropy</strong>. We also
                             assigned class weights
-                            <i>(unsafe: 1 , safe:2)</i> while training as our
+                            <i>(unsafe: 1 , safe:1.92)</i> while training as our
                             dataset is imbalanced.
                           </li>
                           <li>
@@ -567,7 +567,7 @@
                         </div>
                         <hr style="height: 1px; background-color: #efefef" />
                         <p style="text-align: justify">
-                          It is an advancement over approach 3.2. Since convolutional layers with larger kernel size were not 
+                          Since convolutional layers with larger kernel size were not 
                           optimized by TensorRT engine, we reduced the kernel size and added dialtion to those layers to compensate for
                           the lowering of receptive field. This resulted in a higher inference speed after optimization to TensorRT graph.
                           
@@ -598,7 +598,7 @@
                             Loss function used:
                             <strong>BinaryCrossentropy</strong>. We also
                             assigned class weights
-                            <i>(unsafe: 1 , safe:2)</i> while training as our
+                            <i>(unsafe: 1 , safe:1.92)</i> while training as our
                             dataset is imbalanced.
                           </li>
                           <li>

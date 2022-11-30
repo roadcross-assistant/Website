@@ -144,26 +144,17 @@
                         <div class="h5 mb-0">
                           
                           <span
-                            >Roads in medium-sized Indian towns often have lots
-                            of traffic but no (or disregarded) traffic stops.
-                            This makes it hard to cross the roads safely,
-                            because it involves predicting safe durations using
-                            one’s sight. In this project, we have trained image-
-                            based ML models to predict road crossing safety. Any
-                            suitable dataset did not exist (datasets for
-                            autonomous cars are not recorded from a pedestrian’s
-                            point of view), so we have created our own dataset.
-                            Our dataset consists of 104 videos (>26K frames)
-                            capturing various traffic patterns of Anand, Gujarat, India
-                            using a head-mounted camera. We have also annotated
-                            all videos with timestamps for durations safe for
-                            crossing roads. Using a self-developed CNN architecture, we have 
-                            achieved a recall of 0.79 at precision of 0.90 on the 
-                            test data. Further, by deploying our pretrained model on Nvidia Jetson
-                            Nano, we have developed a portable road crossing assistant
-                            which is intended to be worn by people who are blind or 
-                            suffer from degraded vision, to help them cross busy
-                            roads.</span
+                            >Roads in medium-sized Indian towns often have lots of traffic but no (or disregarded) traffic stops. This makes it hard for the 
+                            blind to cross roads safely, because vision is crucial to determine when crossing is safe. Automatic and reliable image-based safety 
+                            classifiers thus have the potential to help the blind to cross Indian roads. Yet, we currently lack datasets collected on Indian roads 
+                            from the pedestrian point-of-view, labelled with road crossing safety information. Existing classifiers from other countries are often 
+                            intended for crossroads, and hence rely on the detection and presence of traffic lights, which is not applicable in Indian conditions. 
+                            We introduce INDRA (INdian Dataset for RoAd crossing), the first dataset capturing videos of Indian roads from the pedestrian 
+                            point-of-view. INDRA contains 104 videos comprising of 26k 1080p frames, each annotated with a binary road crossing safety label and 
+                            vehicle bounding boxes. We train various classifiers to predict road crossing safety on this data, ranging from SVMs to convolutional
+                             neural networks (CNNs). The best performing model DilatedRoadCrossNet is a novel single-image architecture tailored for deployment on 
+                             the Nvidia Jetson Nano. It achieves 79% recall at 90% precision on unseen images. Lastly, we present a wearable road crossing assistant
+                              running DilatedRoadCrossNet, which can help the blind cross Indian roads in real-time. </span
                           >
                         </div>
                         <br />
@@ -177,6 +168,19 @@
                             height="30px"
                             alt=""
                           />
+                          
+                          <span class="p-1 pl-3">
+                            Accepted for oral presentation at <a href="https://events.iitgn.ac.in/2022/icvgip/" target="_blank"><u> ICVGIP 2022</u>.</a>
+                            Find the arXiv pre-print <a href="https://arxiv.org/abs/2211.07916" target="_blank"><u> here</u></a>.</span
+                          ></span
+                        >
+                        <span class="w-100 d-flex">
+                          <img
+                            src="assets/img/achievements-star.gif"
+                            height="30px"
+                            alt=""
+                          />
+                          
                           <span class="p-1 pl-3">
                             This project has been awarded financial assistance
                             under the Innovation track of the Govt. of Gujarat’s
@@ -201,8 +205,8 @@
                               target="_blank"
                               ><u> Mike Chambers</u> </a
                             >through his AWS Machine Learning Competition on
-                            LinkedIn.</span
-                          ></span
+                            LinkedIn.</span>
+                          </span
                         >
                         <br /><br />
                         <h4 class="text-primary font-weight-bold mb-2">
